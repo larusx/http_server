@@ -1,0 +1,40 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC = gcc$/;"	m
+Computed	sha1.h	/^	int Computed;               \/* Is the digest computed?         *\/$/;"	m	struct:SHA1Context
+Corrupted	sha1.h	/^	int Corrupted;             \/* Is the message digest corrupted? *\/$/;"	m	struct:SHA1Context
+Intermediate_Hash	sha1.h	/^    uint32_t Intermediate_Hash[SHA1HashSize\/4]; \/* Message Digest  *\/$/;"	m	struct:SHA1Context
+Length_High	sha1.h	/^    uint32_t Length_High;           \/* Message length in bits      *\/$/;"	m	struct:SHA1Context
+Length_Low	sha1.h	/^    uint32_t Length_Low;            \/* Message length in bits      *\/$/;"	m	struct:SHA1Context
+Message_Block	sha1.h	/^	uint8_t Message_Block[64];      \/* 512-bit message blocks      *\/$/;"	m	struct:SHA1Context
+Message_Block_Index	sha1.h	/^	int_least16_t Message_Block_Index;$/;"	m	struct:SHA1Context
+PAGE_MAX_LEN	server.c	15;"	d	file:
+RECV_SIZE	server.c	13;"	d	file:
+SEND_SIZE	server.c	14;"	d	file:
+SHA1CircularShift	sha1.c	36;"	d	file:
+SHA1Context	sha1.h	/^typedef struct SHA1Context$/;"	s
+SHA1Context	sha1.h	/^} SHA1Context;$/;"	t	typeref:struct:SHA1Context
+SHA1HashSize	sha1.h	40;"	d
+SHA1Input	sha1.c	/^int SHA1Input(    SHA1Context    *context,$/;"	f
+SHA1PadMessage	sha1.c	/^void SHA1PadMessage(SHA1Context *context)$/;"	f
+SHA1ProcessMessageBlock	sha1.c	/^void SHA1ProcessMessageBlock(SHA1Context *context)$/;"	f
+SHA1Reset	sha1.c	/^int SHA1Reset(SHA1Context *context)$/;"	f
+SHA1Result	sha1.c	/^int SHA1Result( SHA1Context *context,$/;"	f
+_SHA1_H_	sha1.h	17;"	d
+_SHA_enum_	sha1.h	31;"	d
+base	base64.c	/^const char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+\/="; $/;"	v
+base64_encode	base64.c	/^char *base64_encode(const char* data, int data_len) $/;"	f
+main	server.c	/^int main()$/;"	f
+objs	Makefile	/^objs=server.o sha1_base64_key.o sha1.o base64.o$/;"	m
+page_select	server.c	/^void page_select(const char* page_name,int* page_len,char* buf)$/;"	f
+parse_GET_filename	server.c	/^void parse_GET_filename(const char* head,char* filename)$/;"	f
+parse_http_head	server.c	/^void parse_http_head(const char* head,char* filename)$/;"	f
+sha1_base64_key	sha1_base64_key.c	/^unsigned char* sha1_base64_key(unsigned char *str,int str_len)$/;"	f
+shaInputTooLong	sha1.h	/^    shaInputTooLong,    \/* input data too long *\/$/;"	e	enum:__anon1
+shaNull	sha1.h	/^    shaNull,            \/* Null pointer parameter *\/$/;"	e	enum:__anon1
+shaStateError	sha1.h	/^    shaStateError       \/* called Input after Result *\/$/;"	e	enum:__anon1
+shaSuccess	sha1.h	/^    shaSuccess = 0,$/;"	e	enum:__anon1

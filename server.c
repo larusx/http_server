@@ -61,7 +61,6 @@ int main()
 	int sin_size=sizeof(struct sockaddr_in);
 	listen(s_sockfd,10);
 	char* re="HTTP/1.1 200 OK\r\nServer: Test http server\r\nConnection:close\r\n\r\n";
-	char* key="258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);
@@ -135,6 +134,17 @@ int main()
 			page_select("a.html",&page_len,page_buf);
 			send(c_sockfd,re,strlen(re),0);
 			send(c_sockfd,page_buf,page_len,0);
+			recv_pos=strstr(buf,"Sec-WebSocket-Key:");
+			if(recv_pos!=NULL)
+			{
+				recv_pos+=strlen("Sec-WebSocket-Key:");
+				sscanf(recv_pos,"%s",filename);
+				unsigned char* return_key=sha1_base64_key(filename,strlen(filename));
+				//printf("%s\n",return_key);
+				sprintf(buf,"HTTP/1.1 101 Switching Protocols\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nUpgrade: websocket\r\n\r\n",return_key);
+				send(c_sockfd,buf,4096,0);
+				free(return_key);
+			}
 		}
 		else
 		{

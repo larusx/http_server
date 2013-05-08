@@ -2,12 +2,16 @@
 #include<iconv.h>
 #include<string.h>
 #include<fcntl.h>
+#include<sys/stat.h>
+#include<sys/types.h>
 #include<stdlib.h>
 #include<strings.h>
 #include<unistd.h>
+#include<pthread.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
 #define RECV_SIZE 4000000
+#define SEND_SIZE 10000000
 #define PAGE_MAX_LEN 1000000
 char* page_select(const char* page_name,int* page_len)
 {
@@ -17,6 +21,16 @@ char* page_select(const char* page_name,int* page_len)
 	*page_len=len;
 	close(fd);
 	return buf;
+}
+void parse_GET_filename(const char* head,char* filename)
+{
+	char* slash=strchr(head,'/');
+	sscanf(slash+1,"%s",filename);
+}
+void parse_http_head(const char* head,char* filename)
+{
+	if(strstr(head,"GET"))
+		parse_GET_filename(head,filename);
 }
 int main()
 {
@@ -31,6 +45,8 @@ int main()
 	int read_len,on=1,content_len,filename_len,file_extra_len,head_len,file_len;
 	char buf[4097]={0};
 	char* recv_buf=(char*)malloc(RECV_SIZE); 
+	char* send_buf=(char*)malloc(SEND_SIZE);
+	struct stat file_stat;
 	struct sockaddr_in s_sock; struct sockaddr_in c_sock; 
 	bzero(&s_sock,sizeof(struct sockaddr_in));
 	s_sock.sin_family=AF_INET;
@@ -53,6 +69,7 @@ int main()
 		if(!(recv_pos=strstr(buf,"Content-Length:")))
 		{
 			write(fd,buf,read_len);
+			parse_http_head(buf,filename);	
 		}
 		else
 		{
@@ -107,15 +124,39 @@ int main()
 			}
 			close(savefile_fd);
 		}
-		send(c_sockfd,re,strlen(re),0);
-	//	send(c_sockfd,index,index_len,0);
-		int page_len;
-		page=page_select("a.html",&page_len);
-		send(c_sockfd,page,page_len,0);
-		free(page);
+		if(filename[0]==0)
+		{
+			int page_len;
+	//		send(c_sockfd,index,index_len,0);
+			page=page_select("a.html",&page_len);
+			send(c_sockfd,re,strlen(re),0);
+			send(c_sockfd,page,page_len,0);
+			free(page);
+		}
+		else
+		{
+			int send_fd=open(filename,O_RDONLY);
+			if(send_fd!=-1)
+			{
+				fstat(send_fd,&file_stat);
+				file_len=file_stat.st_size;
+				send(c_sockfd,re,strlen(re),0);
+				while(file_len>0)
+				{
+					read_len=read(send_fd,send_buf,SEND_SIZE);
+					send(c_sockfd,send_buf,read_len,0);
+					file_len-=read_len;
+				}
+				printf("%s\n",filename);
+				close(send_fd);
+			}
+			else
+				send(c_sockfd,re,strlen(re),0);
+		}
 		close(c_sockfd);
 	}
 	free(recv_buf);
+	free(send_buf);
 	close(fd);
 	close(s_sockfd);
 	return 0;

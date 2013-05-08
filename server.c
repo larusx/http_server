@@ -13,19 +13,20 @@
 #define RECV_SIZE 4000000
 #define SEND_SIZE 10000000
 #define PAGE_MAX_LEN 1000000
-char* page_select(const char* page_name,int* page_len)
+void page_select(const char* page_name,int* page_len,char* buf)
 {
 	int fd=open(page_name,O_RDONLY);
-	char* buf=(char*)malloc(PAGE_MAX_LEN);
 	int len=read(fd,buf,PAGE_MAX_LEN);
 	*page_len=len;
 	close(fd);
-	return buf;
 }
 void parse_GET_filename(const char* head,char* filename)
 {
 	char* slash=strchr(head,'/');
-	sscanf(slash+1,"%s",filename);
+	if(*(slash+1)==' ')
+		filename[0]=0;
+	else
+		sscanf(slash+1,"%s",filename);
 }
 void parse_http_head(const char* head,char* filename)
 {
@@ -46,6 +47,7 @@ int main()
 	char buf[4097]={0};
 	char* recv_buf=(char*)malloc(RECV_SIZE); 
 	char* send_buf=(char*)malloc(SEND_SIZE);
+	char* page_buf=(char*)malloc(PAGE_MAX_LEN);
 	struct stat file_stat;
 	struct sockaddr_in s_sock; struct sockaddr_in c_sock; 
 	bzero(&s_sock,sizeof(struct sockaddr_in));
@@ -63,6 +65,7 @@ int main()
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);
+		filename[0]=0;
 		read_len=recv(c_sockfd,buf,4096,0);
 		head_len=read_len;
 		buf[read_len]=0;
@@ -123,15 +126,15 @@ int main()
 					ftruncate(savefile_fd,file_len);
 			}
 			close(savefile_fd);
+			filename[0]=0;
 		}
 		if(filename[0]==0)
 		{
 			int page_len;
 	//		send(c_sockfd,index,index_len,0);
-			page=page_select("a.html",&page_len);
+			page_select("a.html",&page_len,page_buf);
 			send(c_sockfd,re,strlen(re),0);
-			send(c_sockfd,page,page_len,0);
-			free(page);
+			send(c_sockfd,page_buf,page_len,0);
 		}
 		else
 		{
@@ -157,6 +160,7 @@ int main()
 	}
 	free(recv_buf);
 	free(send_buf);
+	free(page_buf);
 	close(fd);
 	close(s_sockfd);
 	return 0;

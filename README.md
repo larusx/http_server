@@ -1,7 +1,7 @@
 #Http Server
 
 ##A simple Http server
->	now it support multi-threads base on pthread.
+>		now it support multi-threads base on pthread.
 	ws maybe ok.	
 
 ##TODO

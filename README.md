@@ -1,7 +1,8 @@
 #Http Server
 
 ##A simple Http server
-
+>	now it support multi-threads base on pthread.
+>	
 ##TODO
 * epoll 
 * websocket 

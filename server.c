@@ -54,13 +54,19 @@ void* accepted_func(void* arg)
 		
 	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
+		write(log_fd,buf,head_len);
 		recv_pos+=strlen("Sec-WebSocket-Key:");
 		sscanf(recv_pos,"%s",filename);
 		unsigned char* return_key=sha1_base64_key(filename,strlen(filename));
 		//printf("%s\n",return_key);
-		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nUpgrade: websocket\r\n\r\n",return_key);
-		send(c_sockfd,web_buf,strlen(web_buf),0);
+		//printf("%s\n%d\n",filename,strlen(filename));
+		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nSec-WebSocket-Location: ws://127.0.0.1:8888\r\n\r\n",return_key);
+		send(accepted_sockfd,web_buf,strlen(web_buf),0);
+		write(log_fd,web_buf,strlen(web_buf));
 		free(return_key);
+		head_len=recv(accepted_sockfd,buf,128000,0);
+		write(log_fd,buf,head_len);
+		send(accepted_sockfd,"hello",5,0);
 	}
 	else 
 	{
@@ -84,7 +90,7 @@ void* accepted_func(void* arg)
 				{
 					fstat(send_fd,&file_stat);
 					file_len=file_stat.st_size;
-					send(c_sockfd,code_200,strlen(code_200),0);
+					send(accepted_sockfd,code_200,strlen(code_200),0);
 					while(file_len>0)
 					{
 						read_len=read(send_fd,send_buf,SEND_SIZE);
@@ -171,7 +177,7 @@ int main()
 	bzero(&s_sock,sizeof(struct sockaddr_in));
 	s_sock.sin_family=AF_INET;
 	s_sock.sin_addr.s_addr=htonl(INADDR_ANY);
-	s_sock.sin_port=htons(80);
+	s_sock.sin_port=htons(8888);
 	int s_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	setsockopt(s_sockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 	bind(s_sockfd,(struct sockaddr *)(&s_sock),sizeof(struct sockaddr));

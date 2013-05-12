@@ -7,7 +7,7 @@
 ##TODO
 * epoll 
 * fix bugs
-
+* only chrome OK
 ##about author
 * [larusx](http://posix.sinaapp.com)
 * weibo:[@larus](http://weibo.com/larus)

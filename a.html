@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cloud Storage</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script>
+var socket=new WebSocket('ws://127.0.0.1:8888');
+socket.onopen=function(event){
+	socket.send('我是');
+	socket.onclose=function(event){
+		console.log('close',event);
+	};
+	/*	socket.close()*/
+};	
+socket.onmessage=function(event){
+	console.log('world',event);
+	$("#result").append('<p>'+event.data+'</p>');
+};
+$(document).ready(function(){
+
+		$("#btn").click(function(){
+			socket.send($("#txt").val());	
+			});
+		});
+
+</script>
+</head>
+<body>
+<form enctype="multipart/form-data" action="/" method="POST">  
+上传文件:
+<input type="file" multiple size="80" name="file1" id='f1'>  
+<input type="submit" value="确定" >  
+</form>
+<input type=textarea id="txt">
+<button id="btn">A button</button>
+<p id="result">hello</p>
+</body>
+</html>
+

@@ -100,13 +100,6 @@ void* accepted_func(void* arg)
 			memcpy(&ubuf[2],&ubuf[6],nchars);
 			send(accepted_sockfd,ubuf,2+nchars,0);
 		}
-		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\n\r\n",return_key);
-		send(accepted_sockfd,web_buf,strlen(web_buf),0);
-		write(log_fd,web_buf,strlen(web_buf));
-		free(return_key);
-		head_len=recv(accepted_sockfd,buf,128000,0);
-		write(log_fd,buf,head_len);
-		send(accepted_sockfd,"hello",5,0);
 	}
 	else 
 	{

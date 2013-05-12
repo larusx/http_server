@@ -3,6 +3,7 @@
 <head>
 <title>Cloud Storage</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
+<<<<<<< HEAD
 <script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 <script>
 var socket=new WebSocket('ws://127.0.0.1:8888');
@@ -24,6 +25,20 @@ $(document).ready(function(){
 			});
 		});
 
+=======
+<script>
+var socket=new WebSocket('ws://test.jupiter.cloudlut.net');
+socket.onopen=function(event){
+	socket.send('hello');
+	socket.onmessage=function(event){
+		console.log('world',event);
+	};
+	socket.onclose=function(event){
+		console.log('close',event);
+	};
+	socket.close()
+};	
+>>>>>>> 70b74235dd3e959f71dc81627462e8a0b80cbb30
 </script>
 </head>
 <body>
@@ -32,9 +47,12 @@ $(document).ready(function(){
 <input type="file" multiple size="80" name="file1" id='f1'>  
 <input type="submit" value="确定" >  
 </form>
+<<<<<<< HEAD
 <input type=textarea id="txt">
 <button id="btn">A button</button>
 <p id="result">hello</p>
+=======
+>>>>>>> 70b74235dd3e959f71dc81627462e8a0b80cbb30
 </body>
 </html>
 

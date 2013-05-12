@@ -1,4 +1,6 @@
 #include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
 const char base[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="; 
 char *base64_encode(const char* data, int data_len) 
 { 

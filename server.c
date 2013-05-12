@@ -1,5 +1,4 @@
 #include<stdio.h>
-#include<iconv.h>
 #include<string.h>
 #include<fcntl.h>
 #include<sys/stat.h>
@@ -10,10 +9,20 @@
 #include<pthread.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include"list.h"
 #define RECV_SIZE 4000000
 #define SEND_SIZE 10000000
 #define PAGE_MAX_LEN 1000000
 int log_fd;
+//连接的websocket
+
+typedef struct websocket{
+	socket_list* p_socket_list;
+	pthread_mutex_t mutex;
+}websocket;
+
+websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
+
 char* code_200="HTTP/1.1 200 OK\r\nServer: Larusx Http Server\r\nConnection:close\r\n\r\n";
 int c_sockfd;
 void page_select(const char* page_name,int* page_len,char* buf)
@@ -34,6 +43,21 @@ void parse_http_head(const char* head,char* filename)
 			sscanf(slash+1,"%s",filename);
 	}
 }
+void print_binary(unsigned char from)
+{
+	char to[9];
+	to[8]=0;
+	int move=1,i=7;
+	for(i=7;i>=0;i--)
+	{
+		if(from&(move<<i))
+			to[7-i]='1';
+		else
+			to[7-i]='0';
+	}
+	printf("%s\n",to);
+}
+
 //子线程函数
 void* accepted_func(void* arg)
 {
@@ -51,16 +75,53 @@ void* accepted_func(void* arg)
 	char* page_buf=(char*)malloc(PAGE_MAX_LEN);
 
 	head_len=recv(accepted_sockfd,buf,128000,0);
-		
+
 	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
+		write(log_fd,buf,head_len);
+		//添加连接的websocket
+		pthread_mutex_lock(&websocket_fds.mutex);
+		list_insert(websocket_fds.p_socket_list,accepted_sockfd);
+		pthread_mutex_unlock(&websocket_fds.mutex);
+		//end	
 		recv_pos+=strlen("Sec-WebSocket-Key:");
 		sscanf(recv_pos,"%s",filename);
 		unsigned char* return_key=sha1_base64_key(filename,strlen(filename));
 		//printf("%s\n",return_key);
-		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nUpgrade: websocket\r\n\r\n",return_key);
-		send(c_sockfd,web_buf,strlen(web_buf),0);
+		//printf("%s\n%d\n",filename,strlen(filename));
+		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nSec-WebSocket-Location: ws://127.0.0.1:8888\r\n\r\n",return_key);
+		send(accepted_sockfd,web_buf,strlen(web_buf),0);
+		write(log_fd,web_buf,strlen(web_buf));
 		free(return_key);
+		int i;
+		unsigned char mask[4];
+		unsigned char nchars;
+		unsigned char ubuf[125000];
+		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
+		{
+			//for(i=0;i<head_len;i++)
+		    // 	print_binary(ubuf[i]);
+			for(i=0;i<4;i++)
+				mask[i]=ubuf[i+2];
+			nchars=ubuf[1]&127;
+			for(i=0;i<nchars;i++)
+			{
+				ubuf[i+6]=ubuf[i+6]^mask[i%4];
+				printf("%c",ubuf[i+6]);
+			}
+			printf("\n");
+			ubuf[0]=0x81;
+			ubuf[1]=nchars;
+			memcpy(&ubuf[2],&ubuf[6],nchars);
+			pthread_mutex_lock(&websocket_fds.mutex);
+			//发送到链表上的websocket
+			list_send(websocket_fds.p_socket_list,&ubuf,2+nchars);
+			pthread_mutex_unlock(&websocket_fds.mutex);
+		}
+		//关闭连接移除websocket
+		pthread_mutex_lock(&websocket_fds.mutex);
+		list_remove(websocket_fds.p_socket_list,accepted_sockfd);
+		pthread_mutex_unlock(&websocket_fds.mutex);
 	}
 	else 
 	{
@@ -84,7 +145,7 @@ void* accepted_func(void* arg)
 				{
 					fstat(send_fd,&file_stat);
 					file_len=file_stat.st_size;
-					send(c_sockfd,code_200,strlen(code_200),0);
+					send(accepted_sockfd,code_200,strlen(code_200),0);
 					while(file_len>0)
 					{
 						read_len=read(send_fd,send_buf,SEND_SIZE);
@@ -171,7 +232,7 @@ int main()
 	bzero(&s_sock,sizeof(struct sockaddr_in));
 	s_sock.sin_family=AF_INET;
 	s_sock.sin_addr.s_addr=htonl(INADDR_ANY);
-	s_sock.sin_port=htons(80);
+	s_sock.sin_port=htons(8888);
 	int s_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	setsockopt(s_sockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 	bind(s_sockfd,(struct sockaddr *)(&s_sock),sizeof(struct sockaddr));
@@ -180,11 +241,15 @@ int main()
 	pthread_attr_t p_attr;
 	pthread_attr_init(&p_attr);
 	pthread_attr_setdetachstate(&p_attr,PTHREAD_CREATE_DETACHED);
+	//生成websocket链表
+	websocket_fds.p_socket_list=list_create();
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);
 		pthread_create(&pthread_id,&p_attr,&accepted_func,NULL);
 	}
+	//销毁websocket链表
+	list_clear(websocket_fds.p_socket_list);
 	close(log_fd);
 	close(s_sockfd);
 	return 0;

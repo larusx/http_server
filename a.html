@@ -7,7 +7,7 @@
 <script>
 var socket=new WebSocket('ws://127.0.0.1:8888');
 socket.onopen=function(event){
-	socket.send('我是');
+	socket.send('online one person');
 	socket.onclose=function(event){
 		console.log('close',event);
 	};
@@ -18,7 +18,6 @@ socket.onmessage=function(event){
 	$("#result").append('<p>'+event.data+'</p>');
 };
 $(document).ready(function(){
-
 		$("#btn").click(function(){
 			socket.send($("#txt").val());	
 			});
@@ -42,7 +41,7 @@ $("#test").click(function(){
 <textarea id="txt"></textarea>
 <button id="btn">发送</button>
 <button id="test">test</button>
-<p id="result">hello</p>
+<p id="result">聊天记录</p>
 </body>
 </html>
 

@@ -8,11 +8,11 @@
 var socket=new WebSocket('ws://127.0.0.1:8888');
 socket.onopen=function(event){
 	socket.send('online one person');
-	socket.onclose=function(event){
-		console.log('close',event);
-	};
-	/*	socket.close()*/
 };	
+socket.onclose=function(event){
+	socket.send('offline one person');
+	console.log('close',event);
+};
 socket.onmessage=function(event){
 	console.log('world',event);
 	$("#result").append('<p>'+event.data+'</p>');
@@ -22,14 +22,15 @@ $(document).ready(function(){
 			socket.send($("#txt").val());	
 			});
 		});
-$("#test").click(function(){
-		$.post("a.php",
-			{name:"abc",city:"bj"},
-			function(data,status){
-			$("#result").append(data+status);
+$(document).ready(function(){
+		$("#test").click(function(){
+			$.post("/a.c",
+				{name:"abc",city:"bj"},
+				function(data,status){
+				$("#result").append(data+status);
+				});
 			});
 		});
-
 </script>
 </head>
 <body>

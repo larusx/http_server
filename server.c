@@ -64,7 +64,7 @@ void* accepted_func(void* arg)
 	int accepted_sockfd=c_sockfd;
 	char buf[128000];
 	char web_buf[128000]={0};
-	char filename[100]={0};
+	unsigned char filename[100]={0};
 	char boundary[100];
 	int read_len,head_len=0,file_len;
 	char* recv_pos;
@@ -75,10 +75,15 @@ void* accepted_func(void* arg)
 	char* page_buf=(char*)malloc(PAGE_MAX_LEN);
 
 	head_len=recv(accepted_sockfd,buf,128000,0);
-
+	
+	//ajax请求
+	if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
+	{
+			
+	}
+	//websocket链接
 	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
-		write(log_fd,buf,head_len);
 		//添加连接的websocket
 		pthread_mutex_lock(&websocket_fds.mutex);
 		list_insert(websocket_fds.p_socket_list,accepted_sockfd);
@@ -99,8 +104,8 @@ void* accepted_func(void* arg)
 		unsigned char ubuf[125000];
 		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
 		{
-			//for(i=0;i<head_len;i++)
-		    // 	print_binary(ubuf[i]);
+			for(i=0;i<head_len;i++)
+		     	print_binary(ubuf[i]);
 			for(i=0;i<4;i++)
 				mask[i]=ubuf[i+2];
 			nchars=ubuf[1]&127;
@@ -168,29 +173,37 @@ void* accepted_func(void* arg)
 			recv_pos=strstr(buf,"Content-Length:");
 			sscanf(recv_pos+strlen("Content-Length:"),"%d",&content_len);
 			end_pos=strstr(recv_pos,"\r\n\r\n");
-			end_pos=strstr(end_pos,"--");
+			
+			send(accepted_sockfd,code_200,strlen(code_200),0);
+			head_len=recv(accepted_sockfd,buf,128000,0);
+			write(log_fd,buf,head_len);
+
+			end_pos=strstr(buf,"----");
+			printf("%p\n",end_pos);
 			tmp_pos=strstr(end_pos,"\r\n\r\n");
 			file_extra_len=(int)(tmp_pos-end_pos)+4;
-			recv_pos=strstr(recv_pos,"filename=\"");
+			recv_pos=strstr(end_pos,"filename=\"");
 			recv_pos=recv_pos+strlen("filename=\"");
 			end_pos=recv_pos;
 			filename_len=0;
 			while(*end_pos++!='\"')
 				filename_len++;
-			strncpy(filename,recv_pos,filename_len);
+			char* dir="/home/larus/http_server/upload/";
+			strcpy(filename,dir);
+			strncpy(filename+strlen(dir),recv_pos,filename_len);
 			recv_pos=strstr(end_pos,"\r\n\r\n")+4;
-			filename[filename_len]=0;
+			filename[strlen(dir)+filename_len]=0;
+			printf("%s\n",filename);
 			savefile_fd=open(filename,O_WRONLY|O_CREAT|O_EXCL,0644);
 			if(savefile_fd==-1)
 			{
-				send(accepted_sockfd,code_200,strlen(code_200),0);
 				send(accepted_sockfd,"File Exists!",strlen("File Exists!"),0);
 				close(accepted_sockfd);
 				free(send_buf);
 				free(page_buf);
 				return;
 			}
-			if((head_len-(int)(recv_pos-buf))>=(content_len-file_extra_len-strlen(boundary)-8))
+			if((head_len)>=(content_len-file_extra_len-strlen(boundary)-8))
 			{
 				read_len=write(savefile_fd,recv_pos,content_len-file_extra_len-strlen(boundary)-8);
 			}

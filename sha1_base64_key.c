@@ -10,7 +10,7 @@ unsigned char* sha1_base64_key(unsigned char *str,int str_len)
 	unsigned char* key="258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 	strcat(str,key);
 	SHA1Context sha;
-	uint8_t result[20];
+	unsigned char result[20];
 	SHA1Reset(&sha);
 	SHA1Input(&sha,str,36+str_len);
 	SHA1Result(&sha,result);
@@ -23,8 +23,7 @@ unsigned char* sha1_base64_key(unsigned char *str,int str_len)
 //	for(i=0;i<40;i++)
 //		printf("%c",sha1_str[i]);
 //	printf("\n");
-	unsigned char* base64_str;
-	base64_str=base64_encode(result,20);
+	char* base64_str=base64_encode(result,20);
 //	printf("%s\n",base64_str);
 //	free(base64_str);
 	return base64_str;

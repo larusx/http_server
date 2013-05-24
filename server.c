@@ -25,7 +25,7 @@ typedef struct websocket{
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
 extern char* sha1_base64_key(char *str,int str_len);
 
-char* code_200="HTTP/1.1 200 OK\r\nServer: Larusx Http Server\r\nConnection:close\r\n\r\n";
+char* code_200="HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:close\r\n\r\n";
 int c_sockfd;
 void page_select(const char* page_name,int* page_len,char* buf)
 {

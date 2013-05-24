@@ -3,7 +3,8 @@
 <head>
 <title>Cloud Storage</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
 var socket=new WebSocket('ws://106.3.46.59:80');
 socket.onopen=function(event){
@@ -34,15 +35,27 @@ $(document).ready(function(){
 </script>
 </head>
 <body>
+<a href="https://github.com/larusx/http_server.git"><img style="position: fixed; top: 0; right: 0; border: 0;"src="img/joinus.png" alt="Join us on GitHub" /></a>
+<div class="container-fluid">
+<div class="row-fluid">
+<div class="span6 offset3">
+<div class="page-header">
+<h1>
+实时聊天 <small>Only Chrome</small>
+</h1>
+</div>
 <form enctype="multipart/form-data" action="/" method="POST">  
 上传文件:
 <input type="file" multiple size="80" name="file1" id='f1'>  
 <input type="submit" value="确定" >  
 </form>
 <textarea id="txt"></textarea>
-<button id="btn">发送</button>
+<button class="btn btn-primary" id="btn">发送</button>
 <button id="test">test</button>
 <p id="result">聊天记录</p>
+</div>
+</div>
+</div>
 </body>
 </html>
 

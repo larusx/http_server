@@ -14,6 +14,7 @@
 #define SEND_SIZE 10000000
 #define PAGE_MAX_LEN 1000000
 int log_fd;
+int web_fd;
 //连接的websocket
 
 typedef struct websocket{
@@ -122,9 +123,11 @@ void* accepted_func(void* arg)
 			ubuf[0]=0x81;
 			ubuf[1]=nchars;
 			memcpy(&ubuf[2],&ubuf[6],nchars);
+			write(web_fd,ubuf+2,nchars);
+			write(web_fd,"\n",1);
 			pthread_mutex_lock(&websocket_fds.mutex);
 			//发送到链表上的websocket
-			list_send(websocket_fds.p_socket_list,&ubuf,2+nchars);
+			list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
 			pthread_mutex_unlock(&websocket_fds.mutex);
 		}
 		//关闭连接移除websocket
@@ -242,7 +245,8 @@ int main()
 {
 	int on=1;
 	pthread_t pthread_id;
-	log_fd=open("test",O_WRONLY|O_APPEND|O_CREAT|O_SYNC,0644);//日志文件
+	log_fd=open("log",O_WRONLY|O_APPEND|O_CREAT|O_SYNC,0644);//日志文件
+	web_fd=open("record",O_WRONLY|O_APPEND|O_CREAT|O_SYNC,0644);//聊天记录
 	c_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	struct sockaddr_in s_sock; 
 	struct sockaddr_in c_sock; 

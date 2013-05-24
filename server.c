@@ -10,6 +10,7 @@
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include"list.h"
+#include"time_conv.h"
 #define RECV_SIZE 4000000
 #define SEND_SIZE 10000000
 #define PAGE_MAX_LEN 1000000
@@ -25,7 +26,7 @@ typedef struct websocket{
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
 extern char* sha1_base64_key(char *str,int str_len);
 
-char* code_200="HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:close\r\n\r\n";
+char* code_200="HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\n\r\n";
 int c_sockfd;
 void page_select(const char* page_name,int* page_len,char* buf)
 {
@@ -60,15 +61,22 @@ void print_binary(unsigned char from)
 	printf("%s\n",to);
 }
 
+
 //子线程函数
 void* accepted_func(void* arg)
 {
 	int accepted_sockfd=c_sockfd;
 	char buf[128000];
 	char web_buf[128000]={0};
+	char code_cache[1024];
+	char code_304[1024];
 	char filename[100]={0};
 	char boundary[100];
+	char head_time[50];
 	int read_len,head_len=0,file_len;
+	char* file_ctime;  //文件修改时间
+	char GMT_head_time[50]={0}; //http头Modified时间
+	time_t head_time_t;
 	char* recv_pos;
 	char* end_pos;
 	char* tmp_pos;
@@ -96,7 +104,7 @@ void* accepted_func(void* arg)
 		recv_pos+=strlen("Sec-WebSocket-Key:");
 		sscanf(recv_pos,"%s",filename);
 		char* return_key=sha1_base64_key(filename,strlen(filename));
-		printf("%s\n",return_key);
+		//printf("%s\n",return_key);
 		//printf("%s\n",return_key);
 		//printf("%s\n%d\n",filename,strlen(filename));
 		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nSec-WebSocket-Location: ws://106.3.46.59:80\r\n\r\n",return_key);
@@ -109,8 +117,8 @@ void* accepted_func(void* arg)
 		unsigned char ubuf[125000];
 		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
 		{
-			for(i=0;i<head_len;i++)
-		     	print_binary(ubuf[i]);
+			//for(i=0;i<head_len;i++)
+		    //	print_binary(ubuf[i]);
 			for(i=0;i<4;i++)
 				mask[i]=ubuf[i+2];
 			nchars=ubuf[1]&127;
@@ -157,15 +165,32 @@ void* accepted_func(void* arg)
 				{
 					fstat(send_fd,&file_stat);
 					file_len=file_stat.st_size;
-					send(accepted_sockfd,code_200,strlen(code_200),0);
-					while(file_len>0)
+					time_GMT(file_stat.st_ctime,GMT_head_time);	
+					if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
 					{
-						read_len=read(send_fd,send_buf,SEND_SIZE);
-						send(accepted_sockfd,send_buf,read_len,0);
-						file_len-=read_len;
+label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+						send(accepted_sockfd,code_cache,strlen(code_cache),0);
+						while(file_len>0)
+						{
+							read_len=read(send_fd,send_buf,SEND_SIZE);
+							send(accepted_sockfd,send_buf,read_len,0);
+							file_len-=read_len;
+						}
+						//printf("%s\n",filename);
+						close(send_fd);
 					}
-					//printf("%s\n",filename);
-					close(send_fd);
+					else
+					{
+						sscanf(recv_pos+strlen("If-Modified-Since: "),"%s",head_time);
+						head_time_t=GMT_time(head_time);
+						if(head_time_t+8*3600 <= file_stat.st_ctime)
+							goto label;
+						else
+						{
+							sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+							send(accepted_sockfd,code_304,strlen(code_304),0);
+						}
+					}
 				}
 				else
 					send(accepted_sockfd,code_200,strlen(code_200),0);

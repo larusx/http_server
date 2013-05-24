@@ -3,6 +3,7 @@
 ##A simple Http server
 *	Now it support multi-threads base on pthread.	
 *	websocket support
+* support cache
 
 ##TODO
 * epoll 

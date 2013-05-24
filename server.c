@@ -22,6 +22,7 @@ typedef struct websocket{
 }websocket;
 
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
+extern char* sha1_base64_key(char *str,int str_len);
 
 char* code_200="HTTP/1.1 200 OK\r\nServer: Larusx Http Server\r\nConnection:close\r\n\r\n";
 int c_sockfd;
@@ -64,7 +65,7 @@ void* accepted_func(void* arg)
 	int accepted_sockfd=c_sockfd;
 	char buf[128000];
 	char web_buf[128000]={0};
-	unsigned char filename[100]={0};
+	char filename[100]={0};
 	char boundary[100];
 	int read_len,head_len=0,file_len;
 	char* recv_pos;
@@ -79,11 +80,13 @@ void* accepted_func(void* arg)
 	//ajax请求
 	if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
 	{
-			
+		write(log_fd,buf,strlen(buf));
+		return;	
 	}
 	//websocket链接
 	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
+		write(log_fd,buf,strlen(buf));
 		//添加连接的websocket
 		pthread_mutex_lock(&websocket_fds.mutex);
 		list_insert(websocket_fds.p_socket_list,accepted_sockfd);
@@ -91,10 +94,11 @@ void* accepted_func(void* arg)
 		//end	
 		recv_pos+=strlen("Sec-WebSocket-Key:");
 		sscanf(recv_pos,"%s",filename);
-		unsigned char* return_key=sha1_base64_key(filename,strlen(filename));
+		char* return_key=sha1_base64_key(filename,strlen(filename));
+		printf("%s\n",return_key);
 		//printf("%s\n",return_key);
 		//printf("%s\n%d\n",filename,strlen(filename));
-		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nSec-WebSocket-Location: ws://127.0.0.1:8888\r\n\r\n",return_key);
+		sprintf(web_buf,"HTTP/1.1 101 Switching Protocols\r\nUpgrade: websocket\r\nConnection: Upgrade\r\nSec-WebSocket-Accept: %s\r\nSec-WebSocket-Location: ws://106.3.46.59:80\r\n\r\n",return_key);
 		send(accepted_sockfd,web_buf,strlen(web_buf),0);
 		write(log_fd,web_buf,strlen(web_buf));
 		free(return_key);
@@ -188,7 +192,7 @@ void* accepted_func(void* arg)
 			filename_len=0;
 			while(*end_pos++!='\"')
 				filename_len++;
-			char* dir="/home/larus/http_server/upload/";
+			char* dir="/usr/upload/";
 			strcpy(filename,dir);
 			strncpy(filename+strlen(dir),recv_pos,filename_len);
 			recv_pos=strstr(end_pos,"\r\n\r\n")+4;
@@ -245,7 +249,7 @@ int main()
 	bzero(&s_sock,sizeof(struct sockaddr_in));
 	s_sock.sin_family=AF_INET;
 	s_sock.sin_addr.s_addr=htonl(INADDR_ANY);
-	s_sock.sin_port=htons(8888);
+	s_sock.sin_port=htons(80);
 	int s_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	setsockopt(s_sockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 	bind(s_sockfd,(struct sockaddr *)(&s_sock),sizeof(struct sockaddr));

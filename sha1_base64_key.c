@@ -3,14 +3,15 @@
 #include<stdio.h>
 #include<string.h>
 #include"sha1.h"
-unsigned char* sha1_base64_key(unsigned char *str,int str_len)
+extern char *base64_encode(const char* data, int data_len);
+char* sha1_base64_key(char *str,int str_len)
 {
 	int i,j;
 //	unsigned char str[100]="BwLnAfgkPHY+R/zxLR8E2A==";
-	unsigned char* key="258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
+	char* key="258EAFA5-E914-47DA-95CA-C5AB0DC85B11";
 	strcat(str,key);
 	SHA1Context sha;
-	unsigned char result[20];
+	char result[20];
 	SHA1Reset(&sha);
 	SHA1Input(&sha,str,36+str_len);
 	SHA1Result(&sha,result);

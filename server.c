@@ -17,7 +17,7 @@
 int log_fd;
 int web_fd;
 //连接的websocket
-
+int a;
 typedef struct websocket{
 	socket_list* p_socket_list;
 	pthread_mutex_t mutex;

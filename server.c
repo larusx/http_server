@@ -3,6 +3,8 @@
 #include<fcntl.h>
 #include<sys/stat.h>
 #include<sys/types.h>
+#include<error.h>
+#include<signal.h>
 #include<stdlib.h>
 #include<strings.h>
 #include<unistd.h>
@@ -17,13 +19,13 @@
 int log_fd;
 int web_fd;
 //连接的websocket
-int a;
 typedef struct websocket{
 	socket_list* p_socket_list;
 	pthread_mutex_t mutex;
 }websocket;
 
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
+pthread_cond_t cond=PTHREAD_COND_INITIALIZER;
 extern char* sha1_base64_key(char *str,int str_len);
 
 char* code_200="HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\n\r\n";
@@ -65,7 +67,10 @@ void print_binary(unsigned char from)
 //子线程函数
 void* accepted_func(void* arg)
 {
+	pthread_mutex_lock(&websocket_fds.mutex);
 	int accepted_sockfd=c_sockfd;
+	pthread_cond_signal(&cond);
+	pthread_mutex_unlock(&websocket_fds.mutex);
 	char buf[128000];
 	char web_buf[128000]={0};
 	char code_cache[1024];
@@ -138,6 +143,7 @@ void* accepted_func(void* arg)
 			list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
 			pthread_mutex_unlock(&websocket_fds.mutex);
 		}
+		perror("socket:");
 		//关闭连接移除websocket
 		pthread_mutex_lock(&websocket_fds.mutex);
 		list_remove(websocket_fds.p_socket_list,accepted_sockfd);
@@ -170,6 +176,7 @@ void* accepted_func(void* arg)
 					{
 label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
 						send(accepted_sockfd,code_cache,strlen(code_cache),0);
+						perror("200:");
 						while(file_len>0)
 						{
 							read_len=read(send_fd,send_buf,SEND_SIZE);
@@ -189,6 +196,7 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 						{
 							sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
 							send(accepted_sockfd,code_304,strlen(code_304),0);
+							perror("304:");
 						}
 					}
 				}
@@ -282,7 +290,7 @@ int main()
 	int s_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	setsockopt(s_sockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 	bind(s_sockfd,(struct sockaddr *)(&s_sock),sizeof(struct sockaddr));
-	int sin_size=sizeof(struct sockaddr_in);
+	socklen_t sin_size=sizeof(struct sockaddr_in);
 	listen(s_sockfd,20);
 	pthread_attr_t p_attr;
 	pthread_attr_init(&p_attr);
@@ -292,7 +300,12 @@ int main()
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);
+		perror("accept:");
+		pthread_mutex_lock(&websocket_fds.mutex);
 		pthread_create(&pthread_id,&p_attr,&accepted_func,NULL);
+		pthread_cond_wait(&cond,&websocket_fds.mutex);
+		pthread_mutex_unlock(&websocket_fds.mutex);
+
 	}
 	//销毁websocket链表
 	list_clear(websocket_fds.p_socket_list);

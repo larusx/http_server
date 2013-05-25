@@ -172,6 +172,7 @@ void* accepted_func(void* arg)
 					fstat(send_fd,&file_stat);
 					file_len=file_stat.st_size;
 					time_GMT(file_stat.st_ctime,GMT_head_time);	
+					printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
 					if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
 					{
 label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
@@ -188,9 +189,10 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 					}
 					else
 					{
-						sscanf(recv_pos+strlen("If-Modified-Since: "),"%s",head_time);
+						sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
 						head_time_t=GMT_time(head_time);
-						if(head_time_t+8*3600 <= file_stat.st_ctime)
+						printf("%s %d\n",head_time,head_time_t);
+						if(file_stat.st_ctime - head_time_t > 8*3600)
 							goto label;
 						else
 						{
@@ -297,6 +299,7 @@ int main()
 	pthread_attr_setdetachstate(&p_attr,PTHREAD_CREATE_DETACHED);
 	//生成websocket链表
 	websocket_fds.p_socket_list=list_create();
+	signal(SIGPIPE,SIG_IGN);
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);

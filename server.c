@@ -25,6 +25,7 @@ typedef struct websocket{
 }websocket;
 
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
+pthread_mutex_t mutex=PTHREAD_MUTEX_INITIALIZER;
 pthread_cond_t cond=PTHREAD_COND_INITIALIZER;
 extern char* sha1_base64_key(char *str,int str_len);
 
@@ -60,17 +61,19 @@ void print_binary(unsigned char from)
 		else
 			to[7-i]='0';
 	}
+#ifdef NDEBUG
 	printf("%s\n",to);
+#endif
 }
 
 
 //子线程函数
 void* accepted_func(void* arg)
 {
-	pthread_mutex_lock(&websocket_fds.mutex);
+	pthread_mutex_lock(&mutex);
 	int accepted_sockfd=c_sockfd;
 	pthread_cond_signal(&cond);
-	pthread_mutex_unlock(&websocket_fds.mutex);
+	pthread_mutex_unlock(&mutex);
 	char buf[128000];
 	char web_buf[128000]={0};
 	char code_cache[1024];
@@ -130,9 +133,13 @@ void* accepted_func(void* arg)
 			for(i=0;i<nchars;i++)
 			{
 				ubuf[i+6]=ubuf[i+6]^mask[i%4];
+#ifdef NDEBUG
 				printf("%c",ubuf[i+6]);
+#endif
 			}
+#ifdef NDEBUG
 			printf("\n");
+#endif
 			ubuf[0]=0x81;
 			ubuf[1]=nchars;
 			memcpy(&ubuf[2],&ubuf[6],nchars);
@@ -143,7 +150,9 @@ void* accepted_func(void* arg)
 			list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
 			pthread_mutex_unlock(&websocket_fds.mutex);
 		}
+#ifdef NDEBUG
 		perror("socket:");
+#endif
 		//关闭连接移除websocket
 		pthread_mutex_lock(&websocket_fds.mutex);
 		list_remove(websocket_fds.p_socket_list,accepted_sockfd);
@@ -172,12 +181,16 @@ void* accepted_func(void* arg)
 					fstat(send_fd,&file_stat);
 					file_len=file_stat.st_size;
 					time_GMT(file_stat.st_ctime,GMT_head_time);	
+#ifdef NDEBUG
 					printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
+#endif
 					if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
 					{
 label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
 						send(accepted_sockfd,code_cache,strlen(code_cache),0);
+#ifdef NDEBUG
 						perror("200:");
+#endif
 						while(file_len>0)
 						{
 							read_len=read(send_fd,send_buf,SEND_SIZE);
@@ -191,14 +204,18 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 					{
 						sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
 						head_time_t=GMT_time(head_time);
+#ifdef NDEBUG
 						printf("%s %d\n",head_time,head_time_t);
+#endif
 						if(file_stat.st_ctime - head_time_t > 8*3600)
 							goto label;
 						else
 						{
 							sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
 							send(accepted_sockfd,code_304,strlen(code_304),0);
+#ifdef NDEBUG
 							perror("304:");
+#endif
 						}
 					}
 				}
@@ -221,7 +238,9 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			write(log_fd,buf,head_len);
 
 			end_pos=strstr(buf,"----");
+#ifdef NDEBUG
 			printf("%p\n",end_pos);
+#endif
 			tmp_pos=strstr(end_pos,"\r\n\r\n");
 			file_extra_len=(int)(tmp_pos-end_pos)+4;
 			recv_pos=strstr(end_pos,"filename=\"");
@@ -235,7 +254,9 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			strncpy(filename+strlen(dir),recv_pos,filename_len);
 			recv_pos=strstr(end_pos,"\r\n\r\n")+4;
 			filename[strlen(dir)+filename_len]=0;
+#ifdef NDEBUG
 			printf("%s\n",filename);
+#endif
 			savefile_fd=open(filename,O_WRONLY|O_CREAT|O_EXCL,0644);
 			if(savefile_fd==-1)
 			{
@@ -292,7 +313,7 @@ int main()
 	int s_sockfd=socket(AF_INET,SOCK_STREAM,0);
 	setsockopt(s_sockfd,SOL_SOCKET,SO_REUSEADDR,&on,sizeof(on));
 	bind(s_sockfd,(struct sockaddr *)(&s_sock),sizeof(struct sockaddr));
-	socklen_t sin_size=sizeof(struct sockaddr_in);
+	socklen_t sin_size=sizeof(struct sockaddr);
 	listen(s_sockfd,20);
 	pthread_attr_t p_attr;
 	pthread_attr_init(&p_attr);
@@ -303,11 +324,13 @@ int main()
 	while(1)
 	{
 		c_sockfd=accept(s_sockfd,(struct sockaddr*)(&c_sock),&sin_size);
+#ifdef NDEBUG
 		perror("accept:");
-		pthread_mutex_lock(&websocket_fds.mutex);
+#endif
+		pthread_mutex_lock(&mutex);
 		pthread_create(&pthread_id,&p_attr,&accepted_func,NULL);
-		pthread_cond_wait(&cond,&websocket_fds.mutex);
-		pthread_mutex_unlock(&websocket_fds.mutex);
+		pthread_cond_wait(&cond,&mutex);
+		pthread_mutex_unlock(&mutex);
 
 	}
 	//销毁websocket链表

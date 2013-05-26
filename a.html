@@ -15,8 +15,9 @@ socket.onclose=function(event){
 	console.log('close',event);
 };
 socket.onmessage=function(event){
-	console.log('world',event);
-	$("#result").append('<p>'+event.data+'</p>');
+	/*console.log('world',event);*/
+	time=new Date();
+	$("#result").append('<p>'+time.toLocaleTimeString()+'<br>'+event.data+'</p><hr>');
 };
 $(document).ready(function(){
 		$("#btn").click(function(){
@@ -33,6 +34,7 @@ $(document).ready(function(){
 			});
 		});
 </script>
+
 </head>
 <body>
 <a href="https://github.com/larusx/http_server.git"><img style="position: fixed; top: 0; right: 0; border: 0;"src="img/joinus.png" alt="Join us on GitHub" /></a>
@@ -52,7 +54,9 @@ $(document).ready(function(){
 <textarea id="txt"></textarea>
 <button class="btn btn-primary" id="btn">发送</button>
 <button id="test">test</button>
+<div style="overflow:scroll;height:300px;width:400px;background-color:rgb(241,209,209);"
 <p id="result">聊天记录</p>
+</div>
 </div>
 </div>
 </div>

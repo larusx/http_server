@@ -5,7 +5,7 @@
 //
 //
 //websocket 链表
-#define PRINT
+//#define PRINT
 
 #include<malloc.h>
 #include"list.h"
@@ -76,5 +76,7 @@ void list_send(socket_list* head,char* buf,int length)
 		printf("%d ",head->sock_fd);
 		#endif
 	}
+#ifdef PRINT
 	printf("\n");
+#endif
 }

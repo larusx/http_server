@@ -4,6 +4,7 @@
 <title>Cloud Storage</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link rel="shortcut icon" href="img/favicon.ico">
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
 <script>
 var socket=new WebSocket('ws://106.3.46.59:80');
@@ -72,6 +73,9 @@ $(document).keyup(function(){
 			if(event.keyCode == 13)
 				$("#btn").trigger("click");
 				$("#txt").focus();
+		});
+$(document).keypress(function(){
+			$("#txt").focus();
 		});
 </script>
 </body>

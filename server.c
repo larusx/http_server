@@ -227,17 +227,18 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 		{
 			int content_len,file_extra_len,filename_len;
 			write(log_fd,buf,head_len);
-			recv_pos=strstr(buf,"boundary=");
-			sscanf(recv_pos+strlen("boundary="),"%s",boundary);
 			recv_pos=strstr(buf,"Content-Length:");
 			sscanf(recv_pos+strlen("Content-Length:"),"%d",&content_len);
-			end_pos=strstr(recv_pos,"\r\n\r\n");
-			
-			send(accepted_sockfd,code_200,strlen(code_200),0);
-			head_len=recv(accepted_sockfd,buf,128000,0);
-			write(log_fd,buf,head_len);
-
-			end_pos=strstr(buf,"----");
+			recv_pos=strstr(buf,"boundary=");
+			sscanf(recv_pos+strlen("boundary="),"%s",boundary);
+			recv_pos=strstr(recv_pos,"\r\n\r\n");
+			if((end_pos=strstr(recv_pos,"----")) == NULL)
+			{	
+				send(accepted_sockfd,code_200,strlen(code_200),0);
+				head_len=recv(accepted_sockfd,buf,128000,0);
+				end_pos=strstr(buf,"----");
+			}
+		//	write(log_fd,buf,head_len);
 #ifdef NDEBUG
 			printf("%p\n",end_pos);
 #endif
@@ -290,6 +291,7 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 					ftruncate(savefile_fd,file_len);
 				free(recv_buf);
 			}
+			send(accepted_sockfd,"Success!",strlen("Success!"),0);
 			close(savefile_fd);
 		}
 	}

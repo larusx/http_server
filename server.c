@@ -89,8 +89,8 @@ void* accepted_func(void* arg)
 	char* end_pos;
 	char* tmp_pos;
 	int savefile_fd;
-	char* send_buf=(char*)malloc(SEND_SIZE);
-	char* page_buf=(char*)malloc(PAGE_MAX_LEN);
+	char send_buf[SEND_SIZE];
+	char page_buf[PAGE_MAX_LEN];
 
 	head_len=recv(accepted_sockfd,buf,128000,0);
 	
@@ -297,8 +297,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			{
 				send(accepted_sockfd,"File Exists!",strlen("File Exists!"),0);
 				close(accepted_sockfd);
-				free(send_buf);
-				free(page_buf);
 				return;
 			}
 			if((head_len)>=(content_len-file_extra_len-strlen(boundary)-8))
@@ -329,8 +327,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			close(savefile_fd);
 		}
 	}
-	free(send_buf);
-	free(page_buf);
 	close(accepted_sockfd);
 }
 int main()

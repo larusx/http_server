@@ -10,58 +10,50 @@
 
 #include<malloc.h>
 #include"list.h"
+#define LIST_LEN 1000
 //创建链表，生成第一个节点。
+
 socket_list* list_create()
 {
-	socket_list* head=(socket_list*)malloc(sizeof(socket_list));
-	head->pnext=NULL;
-	head->sock_fd=-2;
-	return head;
+	int i;
+	list_head = malloc(sizeof(socket_list)*LIST_LEN);
+  list_tail = list_head;
+	socket_list* head=list_head;
+	for(i=0;i<LIST_LEN;i++)
+	{
+		list_tail=(char*)list_tail+sizeof(socket_list);
+		head->sock_fd=-2;
+		head->pnext=list_tail;
+		head=list_tail;
+	}
+	list_tail=(char*)list_tail-sizeof(socket_list);
+	return (socket_list*)list_head;
 }
 //添加链接的websocket描述字
 void list_insert(socket_list* head,int fd)
 {
-	socket_list* node=(socket_list*)malloc(sizeof(socket_list));
-	while(head->pnext!=NULL)
+	while(head->pnext->sock_fd != -2)
 		head=head->pnext;
-	head->pnext=node;
-	node->pnext=NULL;
-	node->sock_fd=fd;
+	head->pnext->sock_fd=fd;
 	#ifdef PRINT
-	printf("insert %d\n",node->sock_fd);
+	printf("insert %d\n",head->sock_fd);
 	#endif
 }
 //删除断开链接的socket
 void list_remove(socket_list* head,int fd)
 {
-	socket_list* cur=head;
-	socket_list* tmp;
-	while(cur->pnext!=NULL)
-	{
-		if(cur->pnext->sock_fd==fd)
-		{
-			tmp=cur->pnext;
-			#ifdef PRINT
-			printf("remove %d\n",tmp->sock_fd);
-			#endif
-			cur->pnext=tmp->pnext;
-			free(tmp);
-			return;
-		}
-		cur=cur->pnext;
-	}
+	while(head->pnext->sock_fd != fd)
+		head=head->pnext;
+	head->pnext=head->pnext->pnext;
+	list_tail->pnext=head->pnext;
+	list_tail=list_tail->pnext;
+	list_tail->sock_fd=-2;
+
 }
 //清除链表
 void list_clear(socket_list* head)
 {
-	socket_list* cur=head;
-	socket_list* tmp;
-	while(cur!=NULL)
-	{
-		tmp=cur;
-		cur=cur->pnext;
-		free(tmp);
-	}
+	free(list_head);
 }
 //发送信息到链表上的websocket
 void list_send(socket_list* head,char* buf,int length)
@@ -69,13 +61,13 @@ void list_send(socket_list* head,char* buf,int length)
 	#ifdef PRINT
 	printf("sendto ");
 	#endif
-	while(head->pnext!=NULL)
+	while(head->pnext->sock_fd != -2)
 	{
-		head=head->pnext;
-		send(head->sock_fd,buf,length,0);
+		send(head->pnext->sock_fd,buf,length,0);
 		#ifdef PRINT
-		printf("%d ",head->sock_fd);
+		printf("%d ",head->pnext->sock_fd);
 		#endif
+		head=head->pnext;
 	}
 #ifdef PRINT
 	printf("\n");

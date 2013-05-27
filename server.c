@@ -13,8 +13,8 @@
 #include<netinet/in.h>
 #include"list.h"
 #include"time_conv.h"
-#define RECV_SIZE 4000000
-#define SEND_SIZE 10000000
+#define RECV_SIZE 1000000
+#define SEND_SIZE 1000000
 #define PAGE_MAX_LEN 1000000
 int log_fd;
 int web_fd;
@@ -123,6 +123,12 @@ void* accepted_func(void* arg)
 		unsigned char mask[4];
 		unsigned char nchars;
 		char ubuf[125000];
+		unsigned char nickname[1000];
+		int nickname_len=0;
+		char* tell="说：";
+		int tell_len=strlen(tell);
+		char* login="登陆了！";
+		int login_len=strlen(login);
 		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
 		{
 			//for(i=0;i<head_len;i++)
@@ -143,12 +149,40 @@ void* accepted_func(void* arg)
 			ubuf[0]=0x81;
 			ubuf[1]=nchars;
 			memcpy(&ubuf[2],&ubuf[6],nchars);
+			if(strncmp(&ubuf[2],"/nick",5) ==0)
+			{
+				nickname[0]=0x81;
+				memcpy(&nickname[2],&ubuf[7],nchars-5);
+				strcpy(&nickname[nchars-3],login);
+				nickname_len=nchars-5;
+				nickname[1]=nickname_len+login_len;
+				pthread_mutex_lock(&websocket_fds.mutex);
+				//发送到链表上的websocket
+				list_send(websocket_fds.p_socket_list,nickname,nickname_len+login_len+2);
+				pthread_mutex_unlock(&websocket_fds.mutex);
+				continue;
+			}
 			write(web_fd,ubuf+2,nchars);
 			write(web_fd,"\n",1);
-			pthread_mutex_lock(&websocket_fds.mutex);
-			//发送到链表上的websocket
-			list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
-			pthread_mutex_unlock(&websocket_fds.mutex);
+			if(nickname_len == 0)
+			{
+				pthread_mutex_lock(&websocket_fds.mutex);
+				//发送到链表上的websocket
+				list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
+				pthread_mutex_unlock(&websocket_fds.mutex);
+			}
+			else
+			{
+				ubuf[1]=nickname_len+tell_len+nchars;
+				strcpy(&nickname[nickname_len+2],tell);
+				strncpy(&nickname[nickname_len+tell_len+2],&ubuf[2],nchars);
+				strncpy(&ubuf[2],&nickname[2],nchars+nickname_len+tell_len);
+				pthread_mutex_lock(&websocket_fds.mutex);
+				//发送到链表上的websocket
+				list_send(websocket_fds.p_socket_list,ubuf,2+nchars+nickname_len+tell_len);
+				pthread_mutex_unlock(&websocket_fds.mutex);
+
+			}
 		}
 //#ifdef NDEBUG
 		perror("socket:");

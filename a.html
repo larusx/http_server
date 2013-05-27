@@ -9,7 +9,7 @@
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
 var socket=new WebSocket('ws://106.3.46.59:80');
-socket.onopen=function(event){
+	socket.onopen=function(event){
 	socket.send('来了一个人');
 };	
 socket.onclose=function(event){
@@ -25,15 +25,23 @@ socket.onmessage=function(event){
 };
 $(document).ready(function(){
 		$("#btn").click(function(){
+			if($('#nickname').val() == "")
+			{
+				$("#innick").show();
+				return false;
+			}
+			$("#innick").hide();
 			if($("#txt").val() == "")
 			{
 				$("#in").show();
+				$('#txt').focus();
 				return false;
 			}
 			else
 			{
 			socket.send($("#txt").val());	
-			$("#txt").val('');
+			$('#txt').val('');
+			$('#txt').focus();
 			$("#in").hide();
 			}
 			});
@@ -74,11 +82,21 @@ $(document).ready(function(){
 <textarea id="txt"></textarea>
 <button class="btn btn-primary" id="btn">发送</button>
 <button class="btn btn-info" id="clr">清空</button>
+
 <div class="alert alert-error" style="display:none" id='in'>
 <button type="button" class="close" data-dismiss="alert">&times;</button>
 <h4>请输入内容</h4>
 </div>
-<h3>聊天窗口，按回车发送消息</h1>
+<div class="alert alert-error" style="display:none" id='innick'>
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+<h4>请输入昵称</h4>
+</div>
+<br>
+<button class="btn btn-success" id="name" type="button" data-toggle="collapse" data-target="#nick">输入昵称</button>
+<div id="nick" class="collapse">
+<input id="nickname" type="text" placeholder="请输入昵称..按回车确定.">
+</div>
+<h3>聊天窗口，按回车发送消息</h3>
 <div id="talkbox" style="overflow:auto;height:300px;width:650px;background-color:#996699;color:#ffffff;border:2px solid #666666;padding:5px;">
 <p id="result"></p>
 </div>
@@ -88,16 +106,35 @@ $(document).ready(function(){
 <script>
 $("#clr").click(function(){
 			$('#result').text("");
+			$('#txt').focus();
 		});
-$(document).keyup(function(){
+$("#txt").keydown(function(event){
 			if(event.keyCode == 13)
+			{
 				$("#btn").trigger("click");
+				/*$("#txt").focus();*/
+			}
+		});
+$("#txt").keyup(function(){
+			if(event.keyCode == 13)
+				$("#txt").val('');
 				$("#txt").focus();
 		});
-$(document).keypress(function(){
-			$("#txt").focus();
-		});
+$("#nickname").keypress(function(event){
+			if(event.keyCode == 13)
+			{
+				if($('#nickname').val() == "")
+					$('#innick').show();
+				else
+				{
+					$('#innick').hide();
+					$("#name").trigger("click");
+					socket.send('/nick'+$('#nickname').val());
+					$('#txt').focus();
+				}
 
+			}
+		});
 </script>
 </body>
 </html>

@@ -122,7 +122,7 @@ void* accepted_func(void* arg)
 		int i;
 		unsigned char mask[4];
 		unsigned char nchars;
-		unsigned char ubuf[125000];
+		char ubuf[125000];
 		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
 		{
 			//for(i=0;i<head_len;i++)
@@ -150,9 +150,9 @@ void* accepted_func(void* arg)
 			list_send(websocket_fds.p_socket_list,ubuf,2+nchars);
 			pthread_mutex_unlock(&websocket_fds.mutex);
 		}
-#ifdef NDEBUG
+//#ifdef NDEBUG
 		perror("socket:");
-#endif
+//#endif
 		//关闭连接移除websocket
 		pthread_mutex_lock(&websocket_fds.mutex);
 		list_remove(websocket_fds.p_socket_list,accepted_sockfd);

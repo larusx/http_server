@@ -6,6 +6,7 @@
 <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
 <link rel="shortcut icon" href="img/favicon.ico">
 <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script>
 var socket=new WebSocket('ws://106.3.46.59:80');
 socket.onopen=function(event){
@@ -24,8 +25,17 @@ socket.onmessage=function(event){
 };
 $(document).ready(function(){
 		$("#btn").click(function(){
+			if($("#txt").val() == "")
+			{
+				$("#in").show();
+				return false;
+			}
+			else
+			{
 			socket.send($("#txt").val());	
 			$("#txt").val('');
+			$("#in").hide();
+			}
 			});
 		});
 $(document).ready(function(){
@@ -49,15 +59,25 @@ $(document).ready(function(){
 <h1>
 在线聊天 <small style="color:#FF0066">HTML5!</small>
 </h1>
+
+<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#f">
+上传文件点我</button>
 </div>
-<form enctype="multipart/form-data" action="/" method="POST">  
+<div id="f" class="collapse">
+<form enctype="multipart/form-data" action="/" method="POST" style="font-family:Microsoft Yahei;font-size:20px;" >  
 上传文件:
 <input type="file" multiple size="80" name="file1" id='f1'>  
 <input type="submit" value="确定" >  
 </form>
+</div>
+
 <textarea id="txt"></textarea>
 <button class="btn btn-primary" id="btn">发送</button>
 <button class="btn btn-info" id="clr">清空</button>
+<div class="alert alert-error" style="display:none" id='in'>
+<button type="button" class="close" data-dismiss="alert">&times;</button>
+<h4>请输入内容</h4>
+</div>
 <h3>聊天窗口，按回车发送消息</h1>
 <div id="talkbox" style="overflow:auto;height:300px;width:650px;background-color:#996699;color:#ffffff;border:2px solid #666666;padding:5px;">
 <p id="result"></p>
@@ -77,6 +97,7 @@ $(document).keyup(function(){
 $(document).keypress(function(){
 			$("#txt").focus();
 		});
+
 </script>
 </body>
 </html>

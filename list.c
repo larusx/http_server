@@ -5,7 +5,8 @@
 //
 //
 //websocket 链表
-//#define PRINT
+#define PRINT
+
 
 #include<malloc.h>
 #include"list.h"

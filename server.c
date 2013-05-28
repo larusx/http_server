@@ -196,66 +196,59 @@ void* accepted_func(void* arg)
 	{
 		if(!(recv_pos=strstr(buf,"Content-Length:")))
 		{
-			write(log_fd,buf,head_len);
-			parse_http_head(buf,filename);	
-			if(filename[0]==0)
+		write(log_fd,buf,head_len);
+		parse_http_head(buf,filename);	
+		if(filename[0]==0)
+		{
+			strcpy(filename,"a.html");
+		}
+		int send_fd=open(filename,O_RDONLY);
+		struct stat file_stat;
+		if(send_fd!=-1)
+		{
+			fstat(send_fd,&file_stat);
+			file_len=file_stat.st_size;
+			time_GMT(file_stat.st_ctime,GMT_head_time);	
+#ifdef NDEBUG
+			printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
+#endif
+			if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
 			{
-				int page_len;
-				//		send(c_sockfd,index,index_len,0);
-				page_select("a.html",&page_len,page_buf);
-				send(accepted_sockfd,code_200,strlen(code_200),0);
-				send(accepted_sockfd,page_buf,page_len,0);
+label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+				send(accepted_sockfd,code_cache,strlen(code_cache),0);
+#ifdef NDEBUG
+				perror("200:");
+#endif
+				while(file_len>0)
+				{
+					read_len=read(send_fd,send_buf,SEND_SIZE);
+					send(accepted_sockfd,send_buf,read_len,0);
+					file_len-=read_len;
+				}
+				//printf("%s\n",filename);
+				close(send_fd);
 			}
 			else
 			{
-				int send_fd=open(filename,O_RDONLY);
-				struct stat file_stat;
-				if(send_fd!=-1)
+				sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
+				head_time_t=GMT_time(head_time);
+#ifdef NDEBUG
+				printf("%s %d\n",head_time,head_time_t);
+#endif
+				if(file_stat.st_ctime - head_time_t > 8*3600)
+					goto label;
+				else
 				{
-					fstat(send_fd,&file_stat);
-					file_len=file_stat.st_size;
-					time_GMT(file_stat.st_ctime,GMT_head_time);	
+					sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+					send(accepted_sockfd,code_304,strlen(code_304),0);
 #ifdef NDEBUG
-					printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
+					perror("304:");
 #endif
-					if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
-					{
-label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
-						send(accepted_sockfd,code_cache,strlen(code_cache),0);
-#ifdef NDEBUG
-						perror("200:");
-#endif
-						while(file_len>0)
-						{
-							read_len=read(send_fd,send_buf,SEND_SIZE);
-							send(accepted_sockfd,send_buf,read_len,0);
-							file_len-=read_len;
-						}
-						//printf("%s\n",filename);
-						close(send_fd);
-					}
-					else
-					{
-						sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
-						head_time_t=GMT_time(head_time);
-#ifdef NDEBUG
-						printf("%s %d\n",head_time,head_time_t);
-#endif
-						if(file_stat.st_ctime - head_time_t > 8*3600)
-							goto label;
-						else
-						{
-							sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
-							send(accepted_sockfd,code_304,strlen(code_304),0);
-#ifdef NDEBUG
-							perror("304:");
-#endif
-						}
 					}
 				}
-				else
-					send(accepted_sockfd,code_200,strlen(code_200),0);
 			}
+			else
+				send(accepted_sockfd,code_200,strlen(code_200),0);
 		}
 		else
 		{

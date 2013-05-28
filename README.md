@@ -16,6 +16,7 @@
 * thread pool
 * cookie
 * test SPDY
+* gzip transform
 
 ##about author
 * [larusx](http://posix.sinaapp.com)

@@ -4,14 +4,18 @@
 *	Now it support multi-threads base on pthread.	
 *	websocket support
 * support cache
+* memory pool for websocket
+* only chrome OK
 
 ##Demo
-* [demo](http://106.3.46.59)
+* [http://aunix.tk](http://aunix.tk)
 
 ##TODO
 * epoll 
 * fix bugs
-* only chrome OK
+* thread pool
+* cookie
+* test SPDY
 
 ##about author
 * [larusx](http://posix.sinaapp.com)

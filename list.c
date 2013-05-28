@@ -44,8 +44,8 @@ void list_remove(socket_list* head,int fd)
 {
 	while(head->pnext->sock_fd != fd)
 		head=head->pnext;
-	head->pnext=head->pnext->pnext;
 	list_tail->pnext=head->pnext;
+	head->pnext=head->pnext->pnext;
 	list_tail=list_tail->pnext;
 	list_tail->sock_fd=-2;
 

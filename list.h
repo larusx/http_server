@@ -18,6 +18,8 @@ void list_insert(socket_list* head,int fd);
 
 void list_remove(socket_list* head,int fd);
 
+int list_get_task(socket_list* head);
+
 void list_clear(socket_list* head);
 
 void list_send(socket_list* head,char* buf,int length);

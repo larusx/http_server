@@ -11,11 +11,13 @@
 #include<pthread.h>
 #include<sys/socket.h>
 #include<netinet/in.h>
+#include<netinet/tcp.h>
 #include"list.h"
 #include"time_conv.h"
 #define RECV_SIZE 1000000
 #define SEND_SIZE 1000000
 #define PAGE_MAX_LEN 1000000
+#define NTHREAD 20
 int log_fd;
 int web_fd;
 //连接的websocket
@@ -25,7 +27,10 @@ typedef struct websocket{
 }websocket;
 
 websocket websocket_fds={NULL,PTHREAD_MUTEX_INITIALIZER};
+socket_list* task_queue_head;
 pthread_mutex_t mutex=PTHREAD_MUTEX_INITIALIZER;
+pthread_mutex_t task_mutex=PTHREAD_MUTEX_INITIALIZER;
+pthread_cond_t task_cond=PTHREAD_COND_INITIALIZER;
 pthread_cond_t cond=PTHREAD_COND_INITIALIZER;
 extern char* sha1_base64_key(char *str,int str_len);
 
@@ -70,10 +75,6 @@ void print_binary(unsigned char from)
 //子线程函数
 void* accepted_func(void* arg)
 {
-	pthread_mutex_lock(&mutex);
-	int accepted_sockfd=c_sockfd;
-	pthread_cond_signal(&cond);
-	pthread_mutex_unlock(&mutex);
 	char buf[128000];
 	char web_buf[128000]={0};
 	char code_cache[1024];
@@ -91,15 +92,42 @@ void* accepted_func(void* arg)
 	int savefile_fd;
 	char send_buf[SEND_SIZE];
 	char page_buf[PAGE_MAX_LEN];
+	int on=1;
+	char* return_key;
+	int accepted_sockfd;
+	int i;
+	unsigned char mask[4];
+	unsigned char nchars;
+	char ubuf[125000];
+	unsigned char nickname[1000];
+	int nickname_len=0;
+	char* tell="说：";
+	int tell_len=strlen(tell);
+	char* login="登陆了！";
+	int login_len=strlen(login);
+	int send_fd;
+	struct stat file_stat;
+	int content_len,file_extra_len,filename_len;
+	char* dir="/usr/upload/";
+	char* recv_buf=(char*)malloc(RECV_SIZE); 
 
+//	setsockopt(accepted_sockfd,SOL_TCP,TCP_NODELAY,&on,sizeof(int));
+//	SOL_SOCKET
+while(1)
+{
+begin:pthread_mutex_lock(&mutex);
+	while(!(accepted_sockfd=list_get_task(task_queue_head)))
+		pthread_cond_wait(&cond,&mutex);
+	pthread_mutex_unlock(&mutex);
+	
 	head_len=recv(accepted_sockfd,buf,128000,0);
 	
 	//ajax请求
-	if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
-	{
-		write(log_fd,buf,strlen(buf));
-		return;	
-	}
+//	if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
+//	{
+//		write(log_fd,buf,strlen(buf));
+//		return;	
+//	}
 	//websocket链接
 	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
@@ -111,7 +139,7 @@ void* accepted_func(void* arg)
 		//end	
 		recv_pos+=strlen("Sec-WebSocket-Key:");
 		sscanf(recv_pos,"%s",filename);
-		char* return_key=sha1_base64_key(filename,strlen(filename));
+		return_key=sha1_base64_key(filename,strlen(filename));
 		//printf("%s\n",return_key);
 		//printf("%s\n",return_key);
 		//printf("%s\n%d\n",filename,strlen(filename));
@@ -119,16 +147,6 @@ void* accepted_func(void* arg)
 		send(accepted_sockfd,web_buf,strlen(web_buf),0);
 		write(log_fd,web_buf,strlen(web_buf));
 		free(return_key);
-		int i;
-		unsigned char mask[4];
-		unsigned char nchars;
-		char ubuf[125000];
-		unsigned char nickname[1000];
-		int nickname_len=0;
-		char* tell="说：";
-		int tell_len=strlen(tell);
-		char* login="登陆了！";
-		int login_len=strlen(login);
 		while(head_len=recv(accepted_sockfd,ubuf,125000,0))
 		{
 			//for(i=0;i<head_len;i++)
@@ -196,53 +214,52 @@ void* accepted_func(void* arg)
 	{
 		if(!(recv_pos=strstr(buf,"Content-Length:")))
 		{
-		write(log_fd,buf,head_len);
-		parse_http_head(buf,filename);	
-		if(filename[0]==0)
-		{
-			strcpy(filename,"a.html");
-		}
-		int send_fd=open(filename,O_RDONLY);
-		struct stat file_stat;
-		if(send_fd!=-1)
-		{
-			fstat(send_fd,&file_stat);
-			file_len=file_stat.st_size;
-			time_GMT(file_stat.st_ctime,GMT_head_time);	
-#ifdef NDEBUG
-			printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
-#endif
-			if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
+			write(log_fd,buf,head_len);
+			parse_http_head(buf,filename);	
+			if(filename[0]==0)
 			{
-label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
-				send(accepted_sockfd,code_cache,strlen(code_cache),0);
-#ifdef NDEBUG
-				perror("200:");
-#endif
-				while(file_len>0)
-				{
-					read_len=read(send_fd,send_buf,SEND_SIZE);
-					send(accepted_sockfd,send_buf,read_len,0);
-					file_len-=read_len;
-				}
-				//printf("%s\n",filename);
-				close(send_fd);
+				strcpy(filename,"a.html");
 			}
-			else
+			send_fd=open(filename,O_RDONLY);
+			if(send_fd!=-1)
 			{
-				sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
-				head_time_t=GMT_time(head_time);
+				fstat(send_fd,&file_stat);
+				file_len=file_stat.st_size;
+				time_GMT(file_stat.st_ctime,GMT_head_time);	
 #ifdef NDEBUG
-				printf("%s %d\n",head_time,head_time_t);
+				printf("%s %d\n",GMT_head_time,file_stat.st_ctime-8*3600);
 #endif
-				if(file_stat.st_ctime - head_time_t > 8*3600)
-					goto label;
+				if(!(recv_pos=strstr(buf,"If-Modified-Since: ")))
+				{
+	label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+					send(accepted_sockfd,code_cache,strlen(code_cache),0);
+#ifdef NDEBUG
+					perror("200:");
+#endif
+					while(file_len>0)
+					{
+						read_len=read(send_fd,send_buf,SEND_SIZE);
+						send(accepted_sockfd,send_buf,read_len,0);
+						file_len-=read_len;
+					}
+					//printf("%s\n",filename);
+					close(send_fd);
+				}
 				else
 				{
-					sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
-					send(accepted_sockfd,code_304,strlen(code_304),0);
+					sscanf(recv_pos+strlen("If-Modified-Since: "),"%[^\r]",head_time);
+					head_time_t=GMT_time(head_time);
 #ifdef NDEBUG
-					perror("304:");
+					printf("%s %d\n",head_time,head_time_t);
+#endif
+					if(file_stat.st_ctime - head_time_t > 8*3600)
+						goto label;
+					else
+					{
+						sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+						send(accepted_sockfd,code_304,strlen(code_304),0);
+#ifdef NDEBUG
+						perror("304:");
 #endif
 					}
 				}
@@ -252,7 +269,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 		}
 		else
 		{
-			int content_len,file_extra_len,filename_len;
 			write(log_fd,buf,head_len);
 			recv_pos=strstr(buf,"Content-Length:");
 			sscanf(recv_pos+strlen("Content-Length:"),"%d",&content_len);
@@ -277,7 +293,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			filename_len=0;
 			while(*end_pos++!='\"')
 				filename_len++;
-			char* dir="/usr/upload/";
 			strcpy(filename,dir);
 			strncpy(filename+strlen(dir),recv_pos,filename_len);
 			recv_pos=strstr(end_pos,"\r\n\r\n")+4;
@@ -290,7 +305,7 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			{
 				send(accepted_sockfd,"File Exists!",strlen("File Exists!"),0);
 				close(accepted_sockfd);
-				return;
+				goto begin;
 			}
 			if((head_len)>=(content_len-file_extra_len-strlen(boundary)-8))
 			{
@@ -300,7 +315,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 			{
 				read_len=write(savefile_fd,recv_pos,head_len-(int)(recv_pos-buf));
 				//				printf("read %d\n",read_len);
-				char* recv_buf=(char*)malloc(RECV_SIZE); 
 				content_len=content_len-strlen(boundary)-8-file_extra_len;
 				file_len=content_len;
 				content_len=content_len-read_len;
@@ -314,7 +328,6 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 				}
 				if(content_len<0)
 					ftruncate(savefile_fd,file_len);
-				free(recv_buf);
 			}
 			send(accepted_sockfd,"Success!",strlen("Success!"),0);
 			close(savefile_fd);
@@ -322,9 +335,11 @@ label:			sprintf(code_cache,"HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:kee
 	}
 	close(accepted_sockfd);
 }
+}
 int main()
 {
 	int on=1;
+	int i;
 	pthread_t pthread_id;
 	log_fd=open("log",O_WRONLY|O_APPEND|O_CREAT|O_SYNC,0644);//日志文件
 	web_fd=open("record",O_WRONLY|O_APPEND|O_CREAT|O_SYNC,0644);//聊天记录
@@ -345,6 +360,11 @@ int main()
 	pthread_attr_setdetachstate(&p_attr,PTHREAD_CREATE_DETACHED);
 	//生成websocket链表
 	websocket_fds.p_socket_list=list_create();
+	task_queue_head=list_create();
+	int nthread=NTHREAD;
+	for(i=0;i<NTHREAD;i++)
+		pthread_create(&pthread_id,&p_attr,&accepted_func,NULL);
+
 	signal(SIGPIPE,SIG_IGN);
 	while(1)
 	{
@@ -353,8 +373,8 @@ int main()
 		perror("accept:");
 #endif
 		pthread_mutex_lock(&mutex);
-		pthread_create(&pthread_id,&p_attr,&accepted_func,NULL);
-		pthread_cond_wait(&cond,&mutex);
+		list_insert(task_queue_head,c_sockfd);
+		pthread_cond_signal(&cond);
 		pthread_mutex_unlock(&mutex);
 
 	}

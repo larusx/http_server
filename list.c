@@ -39,6 +39,20 @@ void list_insert(socket_list* head,int fd)
 	printf("insert %d\n",head->sock_fd);
 	#endif
 }
+//从任务链表取得任务
+int list_get_task(socket_list* head)
+{
+	static int fd;
+	if( (fd=head->pnext->sock_fd) != -2)
+	{
+		list_tail->pnext=head->pnext;
+		head->pnext=head->pnext->pnext;
+		list_tail=list_tail->pnext;
+		list_tail->sock_fd=-2;
+		return fd;//成功取得任务
+	}
+	return 0;
+}
 //删除断开链接的socket
 void list_remove(socket_list* head,int fd)
 {

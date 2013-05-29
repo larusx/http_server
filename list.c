@@ -36,7 +36,7 @@ void list_insert(socket_list* head,int fd)
 		head=head->pnext;
 	head->pnext->sock_fd=fd;
 	#ifdef PRINT
-	printf("insert %d\n",head->sock_fd);
+	printf("insert %d\n",head->pnext->sock_fd);
 	#endif
 }
 //从任务链表取得任务
@@ -49,6 +49,9 @@ int list_get_task(socket_list* head)
 		head->pnext=head->pnext->pnext;
 		list_tail=list_tail->pnext;
 		list_tail->sock_fd=-2;
+		#ifdef PRINT
+		printf("get %d\n",fd);
+		#endif
 		return fd;//成功取得任务
 	}
 	return 0;

@@ -108,7 +108,7 @@ void* accepted_func(void* arg)
 	int send_fd;
 	struct stat file_stat;
 	int content_len,file_extra_len,filename_len;
-	char* dir="/usr/upload/";
+	char* dir="/home/apple/upload/";
 	char* recv_buf=(char*)malloc(RECV_SIZE); 
 
 //	setsockopt(accepted_sockfd,SOL_TCP,TCP_NODELAY,&on,sizeof(int));
@@ -252,7 +252,7 @@ begin:pthread_mutex_lock(&mutex);
 #ifdef NDEBUG
 					printf("%s %d\n",head_time,head_time_t);
 #endif
-					if(file_stat.st_ctime - head_time_t > 8*3600)
+				  if(file_stat.st_ctime - head_time_t > 8*3600)
 						goto label;
 					else
 					{

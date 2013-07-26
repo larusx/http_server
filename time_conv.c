@@ -34,20 +34,40 @@ time_t GMT_time(char* GMT)
 	strncpy(str,&GMT[5],2);
 	str[2]=0;
 	time.tm_mday=atoi(str);
-	strncpy(str,&GMT[8],3);
-	str[3]=0;
-	time.tm_mon=find_number(str,1);
-	strncpy(str,&GMT[12],4);
-	str[4]=0;
-	time.tm_year=atoi(str)-1900;
-	strncpy(str,&GMT[17],2);
-	str[2]=0;
-	time.tm_hour=atoi(str);
-	strncpy(str,&GMT[20],2);
-	str[2]=0;
-	time.tm_min=atoi(str);
-	strncpy(str,&GMT[23],2);
-	str[2]=0;
+	if(GMT[11]==' ')
+	{
+		strncpy(str,&GMT[8],3);
+		str[3]=0;
+		time.tm_mon=find_number(str,1);
+		strncpy(str,&GMT[12],4);
+		str[4]=0;
+		time.tm_year=atoi(str)-1900;
+		strncpy(str,&GMT[17],2);
+		str[2]=0;
+		time.tm_hour=atoi(str);
+		strncpy(str,&GMT[20],2);
+		str[2]=0;
+		time.tm_min=atoi(str);
+		strncpy(str,&GMT[23],2);
+		str[2]=0;
+	}
+	else
+	{
+		strncpy(str,&GMT[8],4);
+		str[4]=0;
+		time.tm_mon=find_number(str,1);
+		strncpy(str,&GMT[13],4);
+		str[4]=0;
+		time.tm_year=atoi(str)-1900;
+		strncpy(str,&GMT[18],2);
+		str[2]=0;
+		time.tm_hour=atoi(str);
+		strncpy(str,&GMT[21],2);
+		str[2]=0;
+		time.tm_min=atoi(str);
+		strncpy(str,&GMT[24],2);
+		str[2]=0;
+	}
 	time.tm_sec=atoi(str);
 	return	return_time=mktime(&time);
 }

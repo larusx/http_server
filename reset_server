@@ -1,3 +1,3 @@
 #!/bin/bash
-ps -ef|grep server|grep -v grep|cut -c 10-15|xargs kill -9
+ps -ef|grep ./server|grep -v grep|cut -c 10-15|xargs kill -9
 nohup ./server &

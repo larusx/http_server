@@ -10030,3 +10030,3966 @@ User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) 
 Accept-Encoding: gzip,deflate,sdch
 Accept-Language: zh-CN,zh;q=0.8
 
+GET //home/apple/upload/favicon.ioc HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET //home/apple/upload/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 510
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryTFYgoqXL34bru3qk
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 6JSfqCBHH/HHuoetLhj/tg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: pMowmtTuv7YUls84Xnx/dqZUzfM=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: OM5rYFlb18Y9EtEIN7XQIQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: PW6Twug9loePR46I2NRj2SwhiM4=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 1N1Gbb3UNLuuGBVH2mKU9A==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 2HeEWAKHJ9c21dFnJkBdRc/eeXI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: x6G+Yl9goaeNE+bBmzm0JA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: cP2cAqc3z6KbpCALJr3h6TuJxX0=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery.min.map HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery.min.map HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: N8jhIO63PZ5S8RRe8n407w==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+;q=0.8
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: hmfCPkwcJZBp3o4KO5jjQZsqD8A=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 0+bPTuWevqKG+aoH1U4BJw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+;q=0.8
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: FZeu0ZWdckWa+pxn7jIZNRx9L5g=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: t6UDxFnPoRChTnuTUFm1aw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: XybRIdhDPzyrdevqSTvs+QPa8Ko=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 11:56:37 GMT
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 1342
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryOAja0muCCtxv5zY1
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: XnxRnryRwzLIPBeMJSvU9A==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 11:56:37 GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: xjnpZ8aEXOiNSP2IgpVZl+Lgpvw=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: km2STcZ1t617wjeJj2QvzQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: X4EICBk+ztbgWqFa4aIbb9qIHRI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 11:56:37 GMT
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:02:00 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: kwQ+7siYO3PNFBbqnfjfjg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: BXWulhxIApGAuochsJP+WmSRSgM=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:00:40 GMT
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: bsep/d7WOfGbrOPSDDacnw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: gt2T2mTy5LLi2VjK2Indlzj4IQU=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:00:40 GMT
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 2540mgauDbWkhIypz8Cdvg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: WynAbtmwdfOQZD5+eq/lJ5+WioU=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: r8yO/a5XLzcAMIAQOb3uKg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: CltMV6aGGzgbz0WbwqlriUWoK8I=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:00:40 GMT
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: dZFIe0HaSXfqeRonn9fcFg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: pj0EYnHzMrYD5ODjFvS7xuOy0AI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 57873987
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarymvxVRM3XqXzasKXr
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: YBdz6XSlcjo8477hAgMuHA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: X5XY3hp+4Imz08D3LnpIC53SkqU=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+Cache-Control: max-age=0
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+Cache-Control: max-age=0
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: yD6zF/0xaz8affNFOGB1aQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: SuFVnFETKn9jTSHTaut+TDyNxU4=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: /AcTZdJfmbW3Lzc4pddciA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: gVFCxX45Qv9jEgFCY0c8TGt62Ro=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:00:40 GMT
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 3404527
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryq8BOAFItwfvIryXT
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 4LVyDON1006b7AOVtztmSQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: MnB3jcaUW60df/sQP6mM5imNYJY=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+Cache-Control: max-age=0
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: LA6Dkvj0e1oin/SLrShy7Q==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 524Sr7zgExC1pyNSsbs3xwoI4Y0=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: k4TWlUI/sZCY2G7RvZFiBA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+:02:31 GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: Gu4qrd3jJl62LHak6VIJll3+ZQc=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: xW1oHMhWSYQM6LC3YXDDyQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: h+jKtac8mU1y6oJmMAqQ3hMwaL0=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:00:40 GMT
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: Y6vg4ChmtOlj9dMEoAbSvw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+4:02:31 GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: PMYbnabcBuh2Oak8bdAvl6ndzhs=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 1938
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary4HbkffsYJ4VPBzco
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: XZXu3DHgH4vcERbm/JrlZg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 7aKQ9eJxc2A4w8sor1vzol0D93k=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: k4TWlUI/sZCY2G7RvZFiBA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+:02:31 GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: Gu4qrd3jJl62LHak6VIJll3+ZQc=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 2463
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryBMRKF7ARiQCA5Ek5
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: MeLON99HkC1perDZfDIdng==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+
+q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: F6Cr6hw0QUauH4BqbWPaUAV6oFI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: xW1oHMhWSYQM6LC3YXDDyQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: h+jKtac8mU1y6oJmMAqQ3hMwaL0=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 2467
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryKBt72RqFxYQBUUXi
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: aPqGPd4Cu1FuhW5RZUPa+A==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 7rEAiUa0zw3KyPh6GP1lFstGwMg=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: KHbNfivgq4bYORUfl33cuQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+CN,zh;q=0.8
+
+/#ITBITSHTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: Hfugw2DNHuwc37bdC5m5rOEFgDE=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: Y6vg4ChmtOlj9dMEoAbSvw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+4:02:31 GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: PMYbnabcBuh2Oak8bdAvl6ndzhs=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 4QuWa8DTGAVT0BY0AOnujw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: tQxcu7egjdST3lpzagbCh2XH5fA=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 237780
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundary5AuZytWbFs9IIVPA
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: sCgezkvLlNmsgK7Esm5XxQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: yGqFLB24cKYv9LLnISRefYu30yU=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: MeLON99HkC1perDZfDIdng==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+
+q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: F6Cr6hw0QUauH4BqbWPaUAV6oFI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 7NQwBXv4z4elWUAWo29kfA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+
+CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: QCWILKOSwCuzM9RI3PJFtsgcazc=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET //home/apple/upload/ConsoleApplication2.exe HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 4QuWa8DTGAVT0BY0AOnujw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: tQxcu7egjdST3lpzagbCh2XH5fA=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 4kZeYjJU4T0AUplqhuzt6g==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+;q=0.8
+
+
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 6JGi5HtK0b9V6oiOZSO4NAiMVxk=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: kGKAMO6ci9uKCS46xtxhjw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+
+ GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: VAqIInEf9nHcIS4NjXyGBsFfMVI=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.3 Safari/537.36
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: j5lsIC48w0IfQTZPiUyAxw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: f5EOu6FxRD5KMIxwUJjRiXS2BIg=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: n2UqvGi45+Cf2tTZkqZsig==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: yAmXkOSZEZlHmLF482Ksqr9/3QA=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: fO2avCLqlDIFq0JLOrfSpQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+ GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: uXI0ndjPWl+i/WQroqFdJyG9+aw=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: Q8gLrbSGQpwpBB444lqBQQ==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: UcHJQ3YB/jdkExxiZbXmmqA3EuY=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: b+yRkTKC2YrGJNPoP/fzyw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: ua8Hg0lI+HOEQeDafCKvxUp+ygs=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: EQNcO6cFCe92hLEd1McFew==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+ GMT
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: OQE6+40HHpLvXIqYHf8bI8VcU+w=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: 0b/zDAr8CebU6mDGCmn/rw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 3/UyyaEtg9j+h1pIeh94e+h35/o=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+GET / HTTP/1.1
+Accept: */*
+Accept-Language: zh-cn
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /css/bootstrap.min.css HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /js/bootstrap.min.js HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /img/forkme.png HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /img/index_back.jpg HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; .NET4.0C; .NET4.0E; InfoPath.3)
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.57 Safari/537.17
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+Accept-Charset: GBK,utf-8;q=0.7,*;q=0.3
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/css,*/*;q=0.1
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: image/webp,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: F5OR9oCJ0MXNVwQCcCJVDg==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 7+Nc7EGqZpd9l5TejXeBKZNPRwU=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET /img/favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 53677
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryi6oB5YZRVTPNdVJq
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: wGWWAnPcZTno3WyWNG9zIA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: jzDRTNZrjX9/ox9ypoFnNdqdWOc=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Accept: image/jpeg, application/x-ms-application, image/gif, application/xaml+xml, image/pjpeg, application/x-ms-xbap, application/vnd.ms-excel, application/vnd.ms-powerpoint, application/msword, */*
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /css/bootstrap.min.css HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /js/bootstrap.min.js HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /img/forkme.png HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /img/index_back.jpg HTTP/1.1
+Accept: */*
+Referer: http://192.168.0.38/
+Accept-Language: zh-CN
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Accept-Encoding: gzip, deflate
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET /img/favicon.ico HTTP/1.1
+Accept: */*
+Accept-Encoding: gzip, deflate
+User-Agent: Mozilla/4.0 (compatible; MSIE 8.0; Windows NT 6.1; Trident/4.0; SLCC2; .NET CLR 2.0.50727; .NET CLR 3.5.30729; .NET CLR 3.0.30729; Media Center PC 6.0; InfoPath.2)
+Host: 192.168.0.38
+Connection: Keep-Alive
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/Four%20Algo.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/four.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 1003562
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryGXu8EBwsNKUqT5HK
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: UQg0NmRTG6Yv73OzX1uy7A==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: IPl9529EK58c9+XJrHAKzbLxa9w=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/tensor_toolbox_2.5.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 20652518
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundarye6VhAoGc5sUAXNf1
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: kVdeThP/lQvI8KLga4qS6Q==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: oL2GcqEF1vnhShzBbg9y5qRlYxA=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: wGWWAnPcZTno3WyWNG9zIA==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: jzDRTNZrjX9/ox9ypoFnNdqdWOc=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/TDALAB_Ver1.0.zip HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+POST / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Content-Length: 252100
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+Origin: http://192.168.0.38
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Content-Type: multipart/form-data; boundary=----WebKitFormBoundaryYPugOBKG0crNlGAB
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /favicon.ico HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: rCW/X+n+L4/5EF7/dZNshw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: O0xkRzijEz6o50iH87mcdRfyrLw=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: UQg0NmRTG6Yv73OzX1uy7A==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: IPl9529EK58c9+XJrHAKzbLxa9w=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept-Language: zh-cn
+Connection: Keep-Alive
+User-Agent: MINIXL
+Host: 192.168.0.38
+Cache-Control: no-cache
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET //home/apple/upload/cli.exe HTTP/1.1
+Accept: */*
+Cache-Control: no-cache
+Connection: Keep-Alive
+Host: 192.168.0.38
+Pragma: no-cache
+Range: bytes=0-
+Referer: http://192.168.0.38//home/apple/upload
+User-Agent: Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322; .NET CLR 2.0.50727)
+
+GET / HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Fri, 26 July 2013 12:03:03 GMT
+
+GET /css/bootstrap.min.css HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: text/css,*/*;q=0.1
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /js/jquery-1.9.1.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /js/bootstrap.min.js HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: */*
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+
+GET /img/forkme.png HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Wed, 24 July 2013 17:03:04 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET /img/index_back.jpg HTTP/1.1
+Host: 192.168.0.38
+Connection: keep-alive
+Cache-Control: max-age=0
+Accept: image/webp,*/*;q=0.8
+If-Modified-Since: Mon, 22 July 2013 14:02:31 GMT
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+Referer: http://192.168.0.38/
+Accept-Encoding: gzip,deflate,sdch
+Accept-Language: zh-CN,zh;q=0.8
+
+GET / HTTP/1.1
+Upgrade: websocket
+Connection: Upgrade
+Host: 192.168.0.38
+Origin: http://192.168.0.38
+Pragma: no-cache
+Cache-Control: no-cache
+Sec-WebSocket-Key: MX9WN6yu/96ylbC06zGYJw==
+Sec-WebSocket-Version: 13
+Sec-WebSocket-Extensions: x-webkit-deflate-frame
+User-Agent: Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/29.0.1547.0 Safari/537.36
+
+HTTP/1.1 101 Switching Protocols
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: SRD6UeTUJ1ZJ1QPcu5VshnEpG2I=
+Sec-WebSocket-Location: ws://106.3.46.59:80
+

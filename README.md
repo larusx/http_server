@@ -6,6 +6,7 @@
 * support cache
 * memory pool for websocket
 * only chrome OK
+* use sendfile
 
 ##Demo
 * [http://aunix.tk](http://aunix.tk)

@@ -12,6 +12,7 @@
 #include<sys/socket.h>
 #include<netinet/in.h>
 #include<netinet/tcp.h>
+#include<sys/sendfile.h>
 #include"list.h"
 #include"time_conv.h"
 #define RECV_SIZE 1000000
@@ -34,7 +35,7 @@ pthread_cond_t task_cond=PTHREAD_COND_INITIALIZER;
 pthread_cond_t cond=PTHREAD_COND_INITIALIZER;
 extern char* sha1_base64_key(char *str,int str_len);
 
-char* code_200="HTTP/1.1 200 OK\r\nServer: LarusX\r\nConnection:keep-alive\r\n\r\n";
+char* code_200="HTTP/1.1 200 OK\r\nSet-cookie: id=3322\r\nServer: LarusX\r\nConnection:keep-alive\r\n\r\n";
 int c_sockfd;
 void page_select(const char* page_name,int* page_len,char* buf)
 {
@@ -121,15 +122,21 @@ begin:pthread_mutex_lock(&mutex);
 	pthread_mutex_unlock(&mutex);
 	
 	head_len=recv(accepted_sockfd,buf,128000,0);
-	
+	if(recv_pos=strstr(buf,"OPTIONS"))
+	{
+		sprintf(web_buf,"HTTP/1.1 200 OK\r\nAllow: GET, POST, OPTIONS\r\nContent-Length: 0\r\n\r\n");
+		send(accepted_sockfd,web_buf,strlen(web_buf),0);
+		write(log_fd,buf,strlen(buf));
+		goto file;
+	}
 	//ajax请求
-//	if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
-//	{
-//		write(log_fd,buf,strlen(buf));
-//		return;	
-//	}
+	else if(recv_pos=strstr(buf,"X-Requested-With: XMLHttpRequest"))
+	{
+		write(log_fd,buf,strlen(buf));
+		goto file;
+	}
 	//websocket链接
-	if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
+	else if(recv_pos=strstr(buf,"Sec-WebSocket-Key:"))
 	{
 		write(log_fd,buf,strlen(buf));
 		//添加连接的websocket
@@ -212,7 +219,7 @@ begin:pthread_mutex_lock(&mutex);
 	}
 	else 
 	{
-		if(!(recv_pos=strstr(buf,"Content-Length:")))
+file:		if(!(recv_pos=strstr(buf,"Content-Length:")))
 		{
 			write(log_fd,buf,head_len);
 			parse_http_head(buf,filename);	
@@ -236,12 +243,14 @@ begin:pthread_mutex_lock(&mutex);
 #ifdef NDEBUG
 					perror("200:");
 #endif
-					while(file_len>0)
-					{
-						read_len=read(send_fd,send_buf,SEND_SIZE);
-						send(accepted_sockfd,send_buf,read_len,0);
-						file_len-=read_len;
-					}
+					//while(file_len>0)
+					//{
+					//	read_len=read(send_fd,send_buf,SEND_SIZE);
+					//	send(accepted_sockfd,send_buf,read_len,0);
+					//	file_len-=read_len;
+					//}
+					//sendfile减少拷贝次数
+					sendfile(accepted_sockfd,send_fd,0,file_len);
 					//printf("%s\n",filename);
 					close(send_fd);
 				}
@@ -256,7 +265,7 @@ begin:pthread_mutex_lock(&mutex);
 						goto label;
 					else
 					{
-						sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
+						sprintf(code_304,"HTTP/1.1 304 Not Modified\r\nServer: LarusX\r\nConnection:keep-alive\r\nSet-cookie: id=\"33\", domain=\"baidu.com\"\r\nLast-Modified: %s\r\n\r\n",GMT_head_time);
 						send(accepted_sockfd,code_304,strlen(code_304),0);
 #ifdef NDEBUG
 						perror("304:");
@@ -336,8 +345,26 @@ begin:pthread_mutex_lock(&mutex);
 	close(accepted_sockfd);
 }
 }
+void daemonize()
+{
+	int fd=open("/dev/null",O_RDWR);
+	if(fork()==0)
+	{
+		dup2(fd,STDIN_FILENO);
+		dup2(fd,STDOUT_FILENO);
+		dup2(fd,STDERR_FILENO);
+		close(fd);
+		setsid();
+		umask(0);
+	}
+	else
+	{
+		exit(0);
+	}
+}
 int main()
 {
+	daemonize();
 	int on=1;
 	int i;
 	pthread_t pthread_id;

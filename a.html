@@ -12,7 +12,7 @@
 <script src="js/controllers.js"></script>
 <script>
 var socket=new WebSocket('ws://192.168.0.38:80');
-	socket.onopen=function(event){
+socket.onopen=function(event){
 	socket.send('来了一个人a');
 };	
 socket.onclose=function(event){
@@ -27,124 +27,126 @@ socket.onmessage=function(event){
 	box.scrollTop=box.scrollHeight;
 };
 $(document).ready(function(){
-		$("#btn").click(function(){
-			if($('#nickname').val() == "")
+	$("#btn").click(function(){
+		if($('#nickname').val() == "")
 			{
 				$("#innick").show();
 				return false;
 			}
 			$("#innick").hide();
 			if($("#txt").val() == "")
-			{
-				$("#in").show();
-				$('#txt').focus();
-				return false;
-			}
-			else
-			{
-			socket.send($("#txt").val());	
-			$('#txt').val('');
-			$('#txt').focus();
-			$("#in").hide();
-			}
-			});
-		});
+				{
+					$("#in").show();
+					$('#txt').focus();
+					return false;
+				}
+				else
+					{
+						socket.send($("#txt").val());	
+						$('#txt').val('');
+						$('#txt').focus();
+						$("#in").hide();
+					}
+	});
+});
 $(document).ready(function(){
-		$("#test").click(function(){
-			$.post("/a.c",
-				{name:"abc",city:"bj"},
-				function(data,status){
-				$("#result").append(data+status);
-				});
-			});
-		});
+	$("#test").click(function(){
+		$.post("/a.c",
+					 {name:"abc",city:"bj"},
+					 function(data,status){
+						 $("#result").append(data+status);
+					 });
+	});
+});
 </script>
 
 </head>
 <body style="background-image:url(img/index_back.jpg)">
-<a href="https://github.com/larusx/http_server.git"><img style="position: fixed; top: 0; left: 0; border: 0;"src="img/forkme.png" alt="Join us on GitHub" /></a>
+<a href="https://github.com/larusx/http_server.git"><img style="position: fixed; top: 0; left: 0; border: 0;" src="img/forkme.png" alt="Join us on GitHub"/></a>
 <div class="container-fluid">
-<div class="row-fluid">
-<div class="span6 offset3">
-<div class="page-header" ng-controller="PhoneListCtrl">
-<h1>
-	在线聊天 <small style="color:#FF0066">HTML5!</small>
-</h1>
-<!--<ul>
+	<div class="row-fluid">
+		<div class="span6 offset3">
+			<div class="page-header" ng-controller="PhoneListCtrl">
+				<h1>
+					在线聊天 <small style="color:#FF0066">HTML5!</small>
+				</h1>
+				<!--<ul>
 	<li ng-repeat="phone in phones">
 	{{phone.name}}
 	</li>
 </ul>-->
-<!--<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>-->
+				<!--<button onclick="TogetherJS(this); return false;">Start TogetherJS</button>-->
+				<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#f">
+					上传文件点我
+				</button>
+			</div>
+			<div id="f" class="collapse">
+				<form enctype="multipart/form-data" action="/" method="POST"
+					style="font-family:Microsoft Yahei;font-size:20px;">
+					上传文件:
+					<input type="file" multiple size="80" name="file1" id='f1'>
+					<input type="submit" value="确定">
+				</form>
+			</div>
 
-<button type="button" class="btn btn-info" data-toggle="collapse" data-target="#f">
-上传文件点我</button>
-</div>
-<div id="f" class="collapse">
-<form enctype="multipart/form-data" action="/" method="POST" style="font-family:Microsoft Yahei;font-size:20px;" >  
-上传文件:
-<input type="file" multiple size="80" name="file1" id='f1'>  
-<input type="submit" value="确定" >  
-</form>
-</div>
+			<textarea id="txt"></textarea>
+			<button class="btn btn-primary" id="btn">发送</button>
+			<button class="btn btn-info" id="clr">清空</button>
 
-<textarea id="txt"></textarea>
-<button class="btn btn-primary" id="btn">发送</button>
-<button class="btn btn-info" id="clr">清空</button>
+			<div class="alert alert-error" style="display:none" id='in'>
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>请输入内容</h4>
+			</div>
+			<div class="alert alert-error" style="display:none" id='innick'>
+				<button type="button" class="close" data-dismiss="alert">&times;</button>
+				<h4>请输入昵称</h4>
+			</div>
+			<br>
+			<button class="btn btn-success" id="name" type="button" data-toggle="collapse" data-target="#nick">输入昵称
+			</button>
+			<div id="nick" class="collapse">
+				<input id="nickname" type="text" placeholder="请输入昵称..按回车确定.">
+				<button class='btn btn-inverse' id='nickOK'>确定</button>
+			</div>
+			<h3>聊天窗口，按回车发送消息</h3>
 
-<div class="alert alert-error" style="display:none" id='in'>
-<button type="button" class="close" data-dismiss="alert">&times;</button>
-<h4>请输入内容</h4>
-</div>
-<div class="alert alert-error" style="display:none" id='innick'>
-<button type="button" class="close" data-dismiss="alert">&times;</button>
-<h4>请输入昵称</h4>
-</div>
-<br>
-<button class="btn btn-success" id="name" type="button" data-toggle="collapse" data-target="#nick">输入昵称</button>
-<div id="nick" class="collapse">
-<input id="nickname" type="text" placeholder="请输入昵称..按回车确定.">
-<button class='btn btn-inverse' id='nickOK'>确定</button>
-</div>
-<h3>聊天窗口，按回车发送消息</h3>
-<div id="talkbox" style="overflow:auto;height:350px;width:650px;background-color:#996699;color:#ffffff;border:2px solid #666666;padding:5px;">
-<p id="result"></p>
-</div>
-</div>
-</div>
-</div>
-<script>
-$("#clr").click(function(){
-			$('#result').text("");
-			$('#txt').focus();
-		});
-$("#txt").keydown(function(event){
-			if(event.keyCode == 13)
-			{
-				$("#btn").trigger("click");
-				/*$("#txt").focus();*/
-			}
-		});
-$("#txt").keyup(function(){
-			if(event.keyCode == 13)
-				$("#txt").val('');
-				$("#txt").focus();
-		});
-$("#nickname").keypress(function(event){
-			if(event.keyCode == 13)
-					$("#nickOK").trigger("click");
-		});
-$('#nickOK').click(function(){
-			if($('#nickname').val() == "")
-					$('#innick').show();
-			else
-			{
-				$('#innick').hide();
-				$("#name").trigger("click");
-				socket.send('/nick'+$('#nickname').val());
-				$('#txt').focus();
-			}
-		});
+			<div id="talkbox"
+				style="overflow:auto;height:350px;width:650px;background-color:#996699;color:#ffffff;border:2px solid #666666;padding:5px;">
+				<p id="result"></p>
+			</div>
+		</div>
+	</div>
+	<div>
+		<script>
+$("#clr").click(function () {
+	$('#result').text("");
+	$('#txt').focus();
+});
+$("#txt").keydown(function (event) {
+	if (event.keyCode == 13) {
+		$("#btn").trigger("click");
+		/*$("#txt").focus();*/
+	}
+});
+$("#txt").keyup(function () {
+	if (event.keyCode == 13)
+		$("#txt").val('');
+	$("#txt").focus();
+});
+$("#nickname").keypress(function (event) {
+	if (event.keyCode == 13)
+		$("#nickOK").trigger("click");
+});
+$('#nickOK').click(function () {
+	if ($('#nickname').val() == "")
+		$('#innick').show();
+	else {
+		$('#innick').hide();
+		$("#name").trigger("click");
+		socket.send('/nick' + $('#nickname').val());
+		$('#txt').focus();
+	}
+});
 </script>
 </body>
 </html>

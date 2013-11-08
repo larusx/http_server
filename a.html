@@ -3,13 +3,13 @@
 <head>
 <title>在线聊天</title>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />  
-<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link rel="shortcut icon" href="img/favicon.ico">
-<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-<!--<script src="js/togetherjs-min.js"></script>-->
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
-<script src="js/angular.min.js"></script>
+<link href="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
 <script src="js/controllers.js"></script>
+<link rel="shortcut icon" href="img/favicon.ico">
+<script type="text/javascript" src="http://lib.sinaapp.com/js/jquery/2.0.3/jquery-2.0.3.min.js"></script>
+<!--<script src="js/togetherjs-min.js"></script>-->
+<script type="text/javascript" src="http://cdn.bootcss.com/twitter-bootstrap/3.0.2/js/bootstrap.min.js">
+<script src="js/angular.min.js"></script>
 <script>
 var socket=new WebSocket('ws://192.168.0.38:80');
 socket.onopen=function(event){
@@ -63,9 +63,9 @@ $(document).ready(function(){
 </head>
 <body style="background-image:url(img/index_back.jpg)">
 <a href="https://github.com/larusx/http_server.git"><img style="position: fixed; top: 0; left: 0; border: 0;" src="img/forkme.png" alt="Join us on GitHub"/></a>
-<div class="container-fluid">
-	<div class="row-fluid">
-		<div class="span6 offset3">
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
 			<div class="page-header" ng-controller="PhoneListCtrl">
 				<h1>
 					在线聊天 <small style="color:#FF0066">HTML5!</small>

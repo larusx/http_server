@@ -1,0 +1,6 @@
+*.o
+server
+record
+log
+.gitignore
+tags
